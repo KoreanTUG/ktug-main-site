@@ -8,11 +8,11 @@ next_tutorial: /tutorials/tex/before-you-start/
 
 KTUG에서 제공하는 TeX 튜토리얼의 구성은 다음과 같습니다.
 
-1. [시작하기 전에](/tutorials/tex/before-you-start/): TeX 학습을 시작하기 전에 알아두면 좋은 내용을 소개합니다.
-2. [TeX 작업 환경 구축](/tutorials/tex/environment/): 운영체제별 TeX 작업 환경 구축 방법을 단계별로 설명합니다.
+1. <a href="{{ '/tutorials/tex/before-you-start/' | relative_url }}">시작하기 전에</a>: TeX 학습을 시작하기 전에 알아두면 좋은 내용을 소개합니다.
+2. <a href="{{ '/tutorials/tex/environment/' | relative_url }}">TeX 작업 환경 구축</a>: 운영체제별 TeX 작업 환경 구축 방법을 단계별로 설명합니다.
     1. Windows
-        1. [MiKTeX으로 구축하는 작업 환경](/tutorials/tex/windows/miktex/)
-        2. [TeX Live로 구축하는 작업 환경](/tutorials/tex/windows/texlive)
+        1. <a href="{{ '/tutorials/tex/windows/miktex/' | relative_url }}">MiKTeX으로 구축하는 작업 환경</a>
+        2. <a href="{{ '/tutorials/tex/windows/texlive/' | relative_url }}">TeX Live로 구축하는 작업 환경</a>
     2. macOS<br>
         준비 중입니다.
     3. Linux<br>
@@ -22,4 +22,4 @@ KTUG에서 제공하는 TeX 튜토리얼의 구성은 다음과 같습니다.
 
 ## 다음 단계
 
-[시작하기 전에](/tutorials/tex/before-you-start/)으로 이동하여 학습을 시작합니다.
+<a href="{{ '/tutorials/tex/before-you-start/' | relative_url }}">시작하기 전에</a>으로 이동하여 학습을 시작합니다.

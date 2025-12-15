@@ -112,11 +112,11 @@ TeX Live Shell의 메인 메뉴에서 **Options** > **Repositories ...**를 실�
 
 ## 기타 유틸리티
 
-TeX Live는 MiKTeX과 달리 Perl이나 pygments (latexminted)를 추가로 설치할 필요가 없습니다. 다만 Python은 따로 설치해야 합니다. 이에 대해서는 [부록](/tutorials/tex/windows/texlive/utils/)에서 안내합니다.
+TeX Live는 MiKTeX과 달리 Perl이나 pygments (latexminted)를 추가로 설치할 필요가 없습니다. 다만 Python은 따로 설치해야 합니다. 이에 대해서는 <a href="{{ '/tutorials/tex/windows/texlive/utils/' | relative_url }}">부록</a>에서 안내합니다.
 
 > **참고** 이 안내서는 한국어 문서 작성을 주로 하는 상황을 가정하고 있습니다. 만약 LaTeX을 설치하는 목적이 영어 논문을 쓰기 위해서라면 TeX Live를 설치한 후 그 상태에서 바로 작업을 시작하면 됩니다. 그 경우에 이 안내서는 여기가 끝입니다. 이후 설명하는 폰트 문제라든가 KTUG 사설저장소 패키지 등은 모두 한국어/한글 문서 작성과 관련있는 것입니다.
 
 ## 다음 단계
 
-TeX Live 설치가 완료되었습니다. 이제 [TeXworks 설정](/tutorials/tex/windows/texlive/texworks/)으로 진행하세요.
+TeX Live 설치가 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/texlive/texworks/' | relative_url }}">TeXworks 설정</a>으로 진행하세요.
 

@@ -59,4 +59,4 @@ MiKTeX의 mpm은 매우 매력적이고 훌륭한 기능이지만 다음 사항�
 
 ## 다음 단계
 
-첫 문서 작성이 완료되었습니다. 이제 [폰트 설치](/tutorials/tex/windows/miktex/fonts/)로 진행하세요.
+첫 문서 작성이 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/miktex/fonts/' | relative_url }}">폰트 설치</a>로 진행하세요.

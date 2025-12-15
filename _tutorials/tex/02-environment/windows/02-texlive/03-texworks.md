@@ -36,5 +36,5 @@ TeXworks를 실행하여 **편집** > **환경 설정**을 눌러서 환경 설�
 
 ## 다음 단계
 
-TeXworks 설정이 완료되었습니다. 이제 [첫 문서 작성하기](/tutorials/tex/windows/texlive/first-doc/)로 진행하세요.
+TeXworks 설정이 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/texlive/first-doc/' | relative_url }}">첫 문서 작성하기</a>로 진행하세요.
 

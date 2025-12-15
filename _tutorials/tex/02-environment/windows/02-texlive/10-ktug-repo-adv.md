@@ -12,7 +12,7 @@ prev_tutorial: /tutorials/tex/windows/texlive/utils/
 
 한국어 문서의 인덱스 생성을 위한 유틸리티 `komkindex` 스크립트가 있습니다. 이것을 `arara`에서 사용하려면 KTUG 사설저장소 패키지로 제공하는 `arara-rules-ko`가 필요한데, 이를 설치하고 설정하는 방법을 설명합니다. arara를 사용하지 않는 경우에는 무시해도 좋습니다.
 
-먼저 [KTUG 사설저장소 패키지](/tutorials/tex/windows/texlive/ktug-repo/)에서 설명한 바와 같이 `TLShell TeX Live Manager`를 **관리자 권한으로 실행**합니다. 이어서 "패키지 목록(PACKAGE LIST)"의 "상태(Status)"에서 "Not installed"를 선택하여 패키지 목록을 갱신합니다. 그런 후에 아래 화면과 같이 "탐색(Search)" 칸에 `arara`를 입력하여 `arara-rules-ko` 패키지를 찾습니다.
+먼저 <a href="{{ '/tutorials/tex/windows/texlive/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>에서 설명한 바와 같이 `TLShell TeX Live Manager`를 **관리자 권한으로 실행**합니다. 이어서 "패키지 목록(PACKAGE LIST)"의 "상태(Status)"에서 "Not installed"를 선택하여 패키지 목록을 갱신합니다. 그런 후에 아래 화면과 같이 "탐색(Search)" 칸에 `arara`를 입력하여 `arara-rules-ko` 패키지를 찾습니다.
 
 ![TLShell arara 탐색](/assets/images/windows/texlive/tlshell-srch-arara.png)
 

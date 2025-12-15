@@ -95,5 +95,5 @@ MiKTeX의 XeLaTeX 또는 LuaLaTeX으로 트루타입이나 오픈타입 폰트�
 
 ## 다음 단계
 
-폰트 설치가 완료되었습니다. 이제 [KTUG 사설저장소 패키지](/tutorials/tex/windows/miktex/ktug-repo/)로 진행하세요.
+폰트 설치가 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/miktex/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>로 진행하세요.
 

@@ -25,8 +25,8 @@ KTUG 방문자 및 KTS 회원들은 대체로 TeX Live를 선호하는 경향이
 
 배포판을 선택했으면 다음 두 페이지 가운데 한 곳으로 이동합니다.
 
-- [MiKTeX으로 구축하는 작업 환경](/tutorials/tex/windows/miktex/): MiKTeX 배포판을 중심으로 TeX 작업 환경을 구축하는 방법을 안내합니다.
-- [TeX Live로 구축하는 작업 환경](/tutorials/tex/windows/texlive/): TeX Live 배포판을 중심으로 TeX 작업 환경을 구축하는 방법을 안내합니다.
+- <a href="{{ '/tutorials/tex/windows/miktex/' | relative_url }}">MiKTeX으로 구축하는 작업 환경</a>: MiKTeX 배포판을 중심으로 TeX 작업 환경을 구축하는 방법을 안내합니다.
+- <a href="{{ '/tutorials/tex/windows/texlive/' | relative_url }}">TeX Live로 구축하는 작업 환경</a>: TeX Live 배포판을 중심으로 TeX 작업 환경을 구축하는 방법을 안내합니다.
 
 ## macOS
 

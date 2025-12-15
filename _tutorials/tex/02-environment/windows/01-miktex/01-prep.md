@@ -48,5 +48,5 @@ Windows에서 `터미널`을 열 수 있는지 확인합니다. `터미널`이�
 
 ## 다음 단계
 
-준비가 완료되었습니다. 이제 [MiKTeX 설치](/tutorials/tex/windows/miktex/install/)로 진행하세요.
+준비가 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/miktex/install/' | relative_url }}">MiKTeX 설치</a>로 진행하세요.
 

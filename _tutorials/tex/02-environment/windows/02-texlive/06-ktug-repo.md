@@ -60,5 +60,5 @@ KTUG 사설저장소에서는 몇 가지의 폰트 패키지를 제공합니다.
 
 ## 다음 단계
 
-KTUG 사설저장소 패키지 설정이 완료되었습니다. 이제 [Visual Studio Code 사용하기](/tutorials/tex/windows/texlive/vscode/)로 진행하세요.
+KTUG 사설저장소 패키지 설정이 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/texlive/vscode/' | relative_url }}">Visual Studio Code 사용하기</a>로 진행하세요.
 

@@ -214,9 +214,9 @@ PDF 보기 창의 적당한 위치에서 `Ctrl`+[Click]하면 그 위치에 해�
 
 이와 같이 소스 편집창과 PDF 보기 창을 상호 동조하는 것을 SyncTeX이라고 하는데, 흔히 소스에서 PDF로 찾아가는 것을 "Forward Search", PDF 창에서 해당하는 소스 위치로 이동하는 것을 "Inverse Search" 또는 "Backward Search"라고 부릅니다. 이 기능이 잘 동작하는지 확인해두어야 합니다.
 
-> **참고** 이 안내서 작성자의 개인적인 취향 때문에 처음에는 외장 뷰어를 설치하고 설정하는 내용을 포함하고 있었습니다. 그러나 그 과정이 너무 번거로워서 처음 사용자를 당황하게 만든다는 지적이 있어서 이를 부록으로 돌렸습니다. 관심있는 분은 [부록](/tutorials/tex/windows/miktex/utils/)의 SumatraPDF 관련 내용을 참고하기 바랍니다.
+> **참고** 이 안내서 작성자의 개인적인 취향 때문에 처음에는 외장 뷰어를 설치하고 설정하는 내용을 포함하고 있었습니다. 그러나 그 과정이 너무 번거로워서 처음 사용자를 당황하게 만든다는 지적이 있어서 이를 부록으로 돌렸습니다. 관심있는 분은 <a href="{{ '/tutorials/tex/windows/miktex/utils/' | relative_url }}">부록</a>의 SumatraPDF 관련 내용을 참고하기 바랍니다.
 
 ## 다음 단계
 
-Visual Studio Code 설정이 완료되었습니다. 이제 [lshort-ko 학습하기](/tutorials/tex/windows/miktex/lshort/)로 진행하세요.
+Visual Studio Code 설정이 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/miktex/lshort/' | relative_url }}">lshort-ko 학습하기</a>로 진행하세요.
 

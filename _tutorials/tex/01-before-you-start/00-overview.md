@@ -95,4 +95,4 @@ TeX 배포판을 설치한 이후에는 사용자가 선택한 편집기의 설�
 
 다음 단계는 사용자의 운영체제에 맞는 TeX 작업 환경을 구축하는 것입니다.
 
-- [TeX 작업 환경 구축](/tutorials/tex/environment/): 운영체제별 TeX 작업 환경 구축 절차와 방법을 안내합니다.
+- <a href="{{ '/tutorials/tex/environment/' | relative_url }}">TeX 작업 환경 구축</a>: 운영체제별 TeX 작업 환경 구축 절차와 방법을 안내합니다.

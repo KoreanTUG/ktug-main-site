@@ -74,4 +74,4 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 
 ## 다음 단계
 
-폰트 설치가 완료되었습니다. 이제 [KTUG 사설저장소 패키지](/tutorials/tex/windows/texlive/ktug-repo/)로 진행하세요.
+폰트 설치가 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/texlive/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>로 진행하세요.

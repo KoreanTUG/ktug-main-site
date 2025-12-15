@@ -83,5 +83,5 @@ Strawberry Perl 설치 프로그램이 실행되면 "사용자 계정 콘트롤"
 
 ## 다음 단계
 
-MiKTeX 설치가 완료되었습니다. 이제 [TeXworks 설정](/tutorials/tex/windows/miktex/texworks/)으로 진행하세요.
+MiKTeX 설치가 완료되었습니다. 이제 <a href="{{ '/tutorials/tex/windows/miktex/texworks/' | relative_url }}">TeXworks 설정</a>으로 진행하세요.
 

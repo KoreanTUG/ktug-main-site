@@ -102,5 +102,5 @@ arara 유틸리티를 사용하려면 Java Runtime이 설치하여야 합니다.
 
 ## 다음 단계
 
-기타 유틸리티 설치가 완료되었습니다. 필요에 따라 [KTUG 사설저장소 추가 설정](/tutorials/tex/windows/miktex/ktug-repo-adv/)을 참고하세요.
+기타 유틸리티 설치가 완료되었습니다. 필요에 따라 <a href="{{ '/tutorials/tex/windows/miktex/ktug-repo-adv/' | relative_url }}">KTUG 사설저장소 추가 설정</a>을 참고하세요.
 
