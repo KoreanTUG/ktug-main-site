@@ -17,10 +17,10 @@ TeX은 워드 프로세서처럼 보이는 그대로 편집하는 [WYSIWYG](http
 즉, **문서를 프로그래밍하듯 작성하는 방식**이라고 이해할 수 있습니다. 다음 그림은 TeX 문서 작성의 워크플로우를 도식화한 것입니다.
 
 <!--
-![TeX 문서 작성 워크플로우](/assets/images/before-start/tex-workflow.png){:style="max-width: 70%; height: auto; display: block; margin: 0 auto;"}
+<img src="{{ '/assets/images/before-start/tex-workflow.png' | relative_url }}" alt="TeX 문서 작성 워크플로우" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
 -->
 
-![TeX 문서 작성 워크플로우](/assets/images/before-you-start/tex-workflow.png)
+<img src="{{ '/assets/images/before-you-start/tex-workflow.png' | relative_url }}" alt="TeX 문서 작성 워크플로우">
 
 ## TeX 사용을 위한 세 가지 핵심 도구
 

@@ -11,7 +11,7 @@ next_tutorial: /tutorials/tex/windows/texlive/prep/
 
 이 안내서는 Windows용 TeX 배포판인 TeX Live를 중심으로 작업 환경의 구축 방법을 단계별로 안내합니다.
 
-> **참고** 이 안내서는 [MiKTeX으로 구축하는 작업 환경](/assets/documents/instguide24.pdf)(Nova de Hi, likesam, aud, 2025)에 기반하여 작성되었습니다. 저자들께 감사드립니다.
+> **참고** 이 안내서는 <a href="{{ '/assets/documents/instguide24.pdf' | relative_url }}">MiKTeX으로 구축하는 작업 환경</a>(Nova de Hi, likesam, aud, 2025)에 기반하여 작성되었습니다. 저자들께 감사드립니다.
 
 ## 구성
 

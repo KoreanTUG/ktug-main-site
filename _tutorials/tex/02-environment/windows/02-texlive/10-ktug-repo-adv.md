@@ -14,15 +14,15 @@ prev_tutorial: /tutorials/tex/windows/texlive/utils/
 
 먼저 <a href="{{ '/tutorials/tex/windows/texlive/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>에서 설명한 바와 같이 `TLShell TeX Live Manager`를 **관리자 권한으로 실행**합니다. 이어서 "패키지 목록(PACKAGE LIST)"의 "상태(Status)"에서 "Not installed"를 선택하여 패키지 목록을 갱신합니다. 그런 후에 아래 화면과 같이 "탐색(Search)" 칸에 `arara`를 입력하여 `arara-rules-ko` 패키지를 찾습니다.
 
-![TLShell arara 탐색](/assets/images/windows/texlive/tlshell-srch-arara.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-srch-arara.png' | relative_url }}" alt="TLShell arara 탐색">
 
 이제 이 패키지를 선택(mark)하고 **Install marked**를 눌러 설치를 진행합니다.
 
-![TLShell arara 설치](/assets/images/windows/texlive/tlshell-inst-arara.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-inst-arara.png' | relative_url }}" alt="TLShell arara 설치">
 
 설치가 완료되면 **Close**와 **Quit**을 차례로 눌러 `TLShell TeX Live Manager`를 종료합니다. 패키지가 설치되면 `arara-rule-komkindex.yaml` 파일이 `C:\texlive\2025\texmf-dist\scripts\arara\rules\` 폴더에 저장된 것을 다음과 같이 확인할 수 있습니다.
 
-![arara 룰 파일](/assets/images/windows/texlive/expl-arara-rule.png)
+<img src="{{ '/assets/images/windows/texlive/expl-arara-rule.png' | relative_url }}" alt="arara 룰 파일">
 
 이제 다음과 같은 arara directive를 쓸 수 있습니다.
 

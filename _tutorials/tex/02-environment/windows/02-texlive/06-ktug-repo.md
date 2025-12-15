@@ -13,7 +13,7 @@ next_tutorial: /tutorials/tex/windows/texlive/vscode/
 
 `Windows` 키를 누르고 'wt'를 입력하여 `터미널`이 표시되면 **관리자 권한으로 실행**을 선택합니다.
 
-![터미널 실행](/assets/images/windows/texlive/win-term-run.png)
+<img src="{{ '/assets/images/windows/texlive/win-term-run.png' | relative_url }}" alt="터미널 실행">
 
 "사용자 계정 컨트롤" 창이 표시되며 "이 앱이 디바이스를 변경할 수 있도록 허용하시겠어요?"라고 물으면 **예**를 누릅니다.
 
@@ -24,7 +24,7 @@ tlmgr repository add https://mirror.ischo.org/KTUG/texlive/tlnet ktug
 tlmgr pinning add "*"
 ```
 
-![KTUG 사설저장소 설정](/assets/images/windows/texlive/ktug-repo-add.png)
+<img src="{{ '/assets/images/windows/texlive/ktug-repo-add.png' | relative_url }}" alt="KTUG 사설저장소 설정">
 
 위의 절차가 잘 진행되었으면 `터미널`을 종료합니다.
 
@@ -32,23 +32,23 @@ tlmgr pinning add "*"
 
 `Windows` 키를 누르고 'tl'을 입력하여 `TLShell TeX Live Manager`가 표시되면 **관리자 권한으로 실행**을 선택합니다.
 
-![TLShell 실행](/assets/images/windows/texlive/tlshell-run.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-run.png' | relative_url }}" alt="TLShell 실행">
 
 "사용자 계정 컨트롤" 창이 표시되며 "이 앱이 디바이스를 변경할 수 있도록 허용하시겠어요?"라고 물으면 **예**를 누릅니다. 그러면 다음과 같이 TeX Live Shell 창이 표시됩니다.
 
-![TLShell 화면](/assets/images/windows/texlive/tlshell-ktug-repo.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-ktug-repo.png' | relative_url }}" alt="TLShell 화면">
 
 위 창에서 앞서 KTUG 사설저장소를 지정한 내용이 반영된 것을 확인할 수 있습니다. 이제 KTUG 사설저장소에 설치된 패키지를 설치해 봅니다. 첫 번째 단계는 패키지 목록(Package List)을 갱신하는 것입니다. 이를 위해 패지키 상태(Status) 가운데 **Not installed**를 선택하면 다음 화면과 같이 주저장소와 사설저장소로부터 패키지 목록을 받아 전체 패키지 목록이 갱신됩니다. **Close**를 눌러서 패키지 목록 갱신을 마칩니다.
 
-![TLShell 패키지 목록 갱신](/assets/images/windows/texlive/tlshell-not-installed.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-not-installed.png' | relative_url }}" alt="TLShell 패키지 목록 갱신">
 
 두 번째 단계는 설치할 패키지를 탐색하는 것입니다. 여기서는 예시로 한글 lipsum 텍스트를 제공하는 jiwonlipsum 패키지를 탐색합니다. 아래 화면에서 보이는 바와 같이 탐색(Search) 칸에 jiwon을 입력합니다.
 
-![TLShell 패키지 탐색](/assets/images/windows/texlive/tlshell-pkg-search.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-pkg-search.png' | relative_url }}" alt="TLShell 패키지 탐색">
 
 탐색 결과로 표시된 패키지를 선택(mark)하고 **Install marked**를 누릅니다. 그러면 다음과 같이 jiwonlipsum 패키지가 설치됩니다. 
 
-![TLShell 패키지 탐색](/assets/images/windows/texlive/tlshell-pkg-inst.png)
+<img src="{{ '/assets/images/windows/texlive/tlshell-pkg-inst.png' | relative_url }}" alt="TLShell 패키지 탐색">
 
 설치가 완료되면 **Close**를 누릅니다. 패키지 관리 작업을 모두 마친 후에는 **Quit**을 눌러 TeX Live Shell을 종료합니다.
 

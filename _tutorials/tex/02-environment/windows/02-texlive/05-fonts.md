@@ -14,7 +14,7 @@ next_tutorial: /tutorials/tex/windows/texlive/ktug-repo/
 - `C:\Windows\Fonts`
 - `C:\Users\<username>\AppData\Local\Microsoft\Windows\Fonts`
 
-이를 위해 [genlocalconf.zip](/assets/downloads/genlocalconf.zip) 파일을 내려받아 아무 곳에나 압축을 풀고, 나오는 `genlocalconf.bat` 파일을 더블클릭하여 실행하면 됩니다.
+이를 위해 <a href="{{ '/assets/downloads/genlocalconf.zip' | relative_url }}">genlocalconf.zip</a> 파일을 내려받아 아무 곳에나 압축을 풀고, 나오는 `genlocalconf.bat` 파일을 더블클릭하여 실행하면 됩니다.
 
 > **참고** LuaLaTeX은 luaotfload 패키지를 이용하여 독자적으로 폰트를 관리합니다. 따라서 대부분의 경우 별도의 조치가 필요하지 않습니다. Windows에서 genlocalfont를 하지 않아도 시스템 폰트와 TEXMF 폰트를 잘 인식하고 로드할 것입니다.
 
@@ -45,7 +45,7 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 
 > **참고** 그냥 우클릭 후에 설치를 선택해도 설치는 가능하지만 여기서는 "모든 사용자용으로 설치"하는 것으로 기술합니다. 폰트 호출 부분을 참고하세요.
 
-![폰트 설치](/assets/images/windows/texlive/expl-font-inst.png)
+<img src="{{ '/assets/images/windows/texlive/expl-font-inst.png' | relative_url }}" alt="폰트 설치">
 
 ### 설치 상태 점검
 
@@ -64,7 +64,7 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 \end{document}
 ```
 
-![폰트 테스트](/assets/images/windows/texlive/texworks-noto.png)
+<img src="{{ '/assets/images/windows/texlive/texworks-noto.png' | relative_url }}" alt="폰트 테스트">
 
 ## 추가 폰트 설치
 

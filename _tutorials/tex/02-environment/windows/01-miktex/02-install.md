@@ -19,11 +19,11 @@ winget search MiKTeX
 
 `winget`을 처음 사용한다면 다음과 같은 화면이 나오는데 `Y`를 입력하여 진행합니다.
 
-![winget 사용 동의 화면](/assets/images/windows/miktex/cap003.png)
+<img src="{{ '/assets/images/windows/miktex/cap003.png' | relative_url }}" alt="winget 사용 동의 화면">
 
 `MiKTeX`을 검색한 결과가 나타납니다. 여기서 확인한 ID로 `install` 명령을 내리면 됩니다.
 
-![winget 검색 결과](/assets/images/windows/miktex/cap004.png)
+<img src="{{ '/assets/images/windows/miktex/cap004.png' | relative_url }}" alt="winget 검색 결과">
 
 ```powershell
 winget install MiKTeX.MiKTeX
@@ -31,7 +31,7 @@ winget install MiKTeX.MiKTeX
 
 다음과 같은 화면이 나타나면서 설치가 진행됩니다. 설치가 진행 중일 때에 아무 것도 건드릴 필요가 없습니다.
 
-![MiKTeX 설치 진행 화면](/assets/images/windows/miktex/cap005.png)
+<img src="{{ '/assets/images/windows/miktex/cap005.png' | relative_url }}" alt="MiKTeX 설치 진행 화면">
 
 완료되면 **종료** 버튼을 누릅니다. 이것으로 MiKTeX 설치는 완료되었습니다.
 
@@ -43,17 +43,17 @@ MiKTeX의 설치 후에는 update를 한 번 해주어야 합니다. 일반적�
 
 Windows 키(`Windows`)를 눌러서 `MiKTeX-Console`이라는 프로그램을 찾아 실행합니다.
 
-![MiKTeX-Console 실행](/assets/images/windows/miktex/cap006.png)
+<img src="{{ '/assets/images/windows/miktex/cap006.png' | relative_url }}" alt="MiKTeX-Console 실행">
 
 실행된 상태에서 맨처음에 다음과 같은 경고 메시지가 나오는데, 그냥 **OK**를 눌러서 진행하면 됩니다.
 
-![MiKTeX-Console 경고 메시지](/assets/images/windows/miktex/cap007.png)
+<img src="{{ '/assets/images/windows/miktex/cap007.png' | relative_url }}" alt="MiKTeX-Console 경고 메시지">
 
 여기서 **Check for updates**라는 버튼을 누르고 업데이트 체크가 끝나기를 기다립니다. 왼쪽 메뉴의 Updates 항목으로 이동하여 **Update now** 버튼을 누릅니다.
 
-![업데이트 확인 및 실행](/assets/images/windows/miktex/cap008.png)
+<img src="{{ '/assets/images/windows/miktex/cap008.png' | relative_url }}" alt="업데이트 확인 및 실행">
 
-![업데이트 진행](/assets/images/windows/miktex/cap009.png)
+<img src="{{ '/assets/images/windows/miktex/cap009.png' | relative_url }}" alt="업데이트 진행">
 
 업데이트가 종료되면 "MiKTeX Console needs to be closed"라는 메시지가 나타나는데 **OK**를 누르면 `MiKTeX-Console`의 실행이 종료됩니다. 업데이트가 잘 완료된 것입니다.
 
@@ -69,11 +69,11 @@ Perl은 다음 명령으로 설치합니다.
 winget install StrawberryPerl.StrawberryPerl
 ```
 
-![Strawberry Perl 설치](/assets/images/windows/miktex/cap012.png)
+<img src="{{ '/assets/images/windows/miktex/cap012.png' | relative_url }}" alt="Strawberry Perl 설치">
 
 Strawberry Perl 설치 프로그램이 실행되면 "사용자 계정 콘트롤"에서 "게시자를 알 수 없는 이 앱이 디바이스를 변경할 수 있도록 허용하시겠어요?"라고 물어옵니다. 여기서 **예**를 클릭하고 진행합니다.
 
-![사용자 계정 콘트롤](/assets/images/windows/miktex/cap080.png)
+<img src="{{ '/assets/images/windows/miktex/cap080.png' | relative_url }}" alt="사용자 계정 콘트롤">
 
 ## 기타 유틸리티(선택)
 

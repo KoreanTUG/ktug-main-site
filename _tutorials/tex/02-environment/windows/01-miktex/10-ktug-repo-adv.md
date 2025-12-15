@@ -28,7 +28,7 @@ C:\Users\****\AppData\Roaming\MiKTeX\scripts\arara\rules\
 
 MiKTeX의 `texdoc` 명령으로 필요한 문서를 찾아 읽을 수 있습니다. 그런데 위의 방법으로 설치한 사설저장소 패키지에 대해서는 (현재) MiKTeX의 `texdoc`이 동작하지 않습니다. 이 불편을 조금 줄여보는 방법으로 제안된 것이 `kstexdoc`라는 간단한 스크립트입니다. 다음 파일을 다운로드받아서 나오는 `.exe` 파일을 PATH가 걸려 있는 적당한 곳에 복사하고 명령행(또는 PowerShell)에서 사용하면 됩니다.
 
-- [kstexdoc.7z](/assets/downloads/kstexdoc.7z)
+- <a href="{{ '/assets/downloads/kstexdoc.7z' | relative_url }}">kstexdoc.7z</a>
 
 예컨대, `jiwonlipsum` 패키지 문서를 읽으려면 명령 프롬프트(cmd) 또는 PowerShell 터미널에서
 

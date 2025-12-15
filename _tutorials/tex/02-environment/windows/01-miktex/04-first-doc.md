@@ -27,23 +27,23 @@ TeXworks를 실행하여 다음 그림과 같은 문서를 작성합니다. 한�
 \end{document}
 ```
 
-![첫 문서 작성](/assets/images/windows/miktex/cap017.png)
+<img src="{{ '/assets/images/windows/miktex/cap017.png' | relative_url }}" alt="첫 문서 작성">
 
 여기서 조판 버튼(▶)을 누르거나 `Ctrl+T` 단축키를 눌러서 문서의 컴파일을 시도합니다. 그러면 (처음 컴파일하는 경우에) 필요한 패키지를 인스톨하기 위하여 다음과 같은 화면이 나타납니다.
 
-![패키지 설치 확인](/assets/images/windows/miktex/cap018.png)
+<img src="{{ '/assets/images/windows/miktex/cap018.png' | relative_url }}" alt="패키지 설치 확인">
 
 여기서 그냥 **Install**을 누르면 필요한 패키지를 인스톨하고 계속하지만 새로운 패키지에 대하여 같은 화면이 또다시 나타납니다. 그러므로 "Always show this dialog" 앞의 체크를 눌러 없애서 MiKTeX이 스스로 필요하면 패키지를 설치하게 합니다.
 
 컴파일이 진행되는 동안 편집 화면의 아래쪽에 컴파일 진행 과정이 보입니다.
 
-![컴파일 진행 과정](/assets/images/windows/miktex/cap020.png)
+<img src="{{ '/assets/images/windows/miktex/cap020.png' | relative_url }}" alt="컴파일 진행 과정">
 
 만약 컴파일이 성공하지 못하고 에러스톱이 발생하는 경우에는 컴파일 콘솔 화면의 더 아래에 한 줄짜리 Interactive Input bar가 있으므로 여기에 `x`를 써넣고 `Enter`를 치면 컴파일이 중단됩니다. `e`를 써넣어서 에러 위치로 이동할 수도 있고 `r`로써 에러를 무시하고 끝까지 시도하게 할 수 있습니다.
 
 컴파일이 성공하면 pdf 미리보기 화면이 다음과 같이 나타납니다.
 
-![PDF 미리보기](/assets/images/windows/miktex/cap021.png)
+<img src="{{ '/assets/images/windows/miktex/cap021.png' | relative_url }}" alt="PDF 미리보기">
 
 ## 자동 패키지 설치 기능에 대하여 알아두어야 할 사항
 

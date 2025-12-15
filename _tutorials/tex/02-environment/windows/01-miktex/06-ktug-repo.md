@@ -15,11 +15,11 @@ next_tutorial: /tutorials/tex/windows/miktex/vscode/
    
    - 다운로드받은 "다운로드" 폴더를 열어서, `texmf-kpr.zip`을 우클릭 하여, "압축 풀기"를 선택합니다.
    
-   ![압축 풀기](/assets/images/windows/miktex/cap062.png)
+   <img src="{{ '/assets/images/windows/miktex/cap062.png' | relative_url }}" alt="압축 풀기">
    
    - 압축을 풀 폴더를 보여주는 대화창이 열렸을 때, 다음 그림과 같이 `c:\usr`을 써넣습니다.
    
-   ![압축 풀기 경로 지정](/assets/images/windows/miktex/cap063.png)
+   <img src="{{ '/assets/images/windows/miktex/cap063.png' | relative_url }}" alt="압축 풀기 경로 지정">
    
    - `C:\usr\texmf-kpr`이라는 폴더가 만들어지면서 압축이 풀리고 나면 `C:\usr` 위치로 탐색기 창이 열릴 것입니다.
 

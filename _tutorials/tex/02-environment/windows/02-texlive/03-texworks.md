@@ -15,7 +15,7 @@ TeX 문서를 편집하기 위한 에디터는 여러 종류가 있으므로 자
 
 TeXworks를 실행하여 **편집** > **환경 설정**을 눌러서 환경 설정 창을 엽니다.
 
-![TeXworks 환경 설정 열기](/assets/images/windows/texlive/texworks-edit.png)
+<img src="{{ '/assets/images/windows/texlive/texworks-edit.png' | relative_url }}" alt="TeXworks 환경 설정 열기">
 
 ### 편집기 탭
 
@@ -24,13 +24,13 @@ TeXworks를 실행하여 **편집** > **환경 설정**을 눌러서 환경 설�
 - **폰트**: 자신이 선호하는 코딩용 폰트와 크기를 설정합니다. 잘 모르겠으면 Consolas 11pt로 하는 것을 권장합니다.
 - **기타**: 줄번호 표시, 줄넘김, 현재 줄 강조, 문법 강조: LaTeX
 
-![편집기 설정](/assets/images/windows/texlive/texworks-editor-tab.png)
+<img src="{{ '/assets/images/windows/texlive/texworks-editor-tab.png' | relative_url }}" alt="편집기 설정">
 
 ### 문서처리 탭
 
 다른 것은 건드리지 말고 "기본값"을 `XeLaTeX`으로 선택합니다.
 
-![문서처리 설정](/assets/images/windows/texlive/texworks-doc-proc-tab.png)
+<img src="{{ '/assets/images/windows/texlive/texworks-doc-proc-tab.png' | relative_url }}" alt="문서처리 설정">
 
 여기서 **확인** 버튼을 누르고 TeXworks 실행을 종료한 다음 다시 실행합니다.
 

@@ -41,15 +41,15 @@ MiKTeX이 기본 제공하는 [TeXworks](https://www.tug.org/texworks/)도 나�
 winget install Microsoft.VisualStudioCode
 ```
 
-![VS Code 설치](/assets/images/windows/miktex/cap031.png)
+<img src="{{ '/assets/images/windows/miktex/cap031.png' | relative_url }}" alt="VS Code 설치">
 
 그러면 VS Code의 설치가 시작됩니다.
 
-![VS Code 설치 진행](/assets/images/windows/miktex/cap032.png)
+<img src="{{ '/assets/images/windows/miktex/cap032.png' | relative_url }}" alt="VS Code 설치 진행">
 
 설치가 완료된 후에 `Windows`를 눌러서 `code`라고 입력하여 이 앱을 잘 실행할 수 있는지 확인합니다.
 
-![VS Code 실행](/assets/images/windows/miktex/cap033.png)
+<img src="{{ '/assets/images/windows/miktex/cap033.png' | relative_url }}" alt="VS Code 실행">
 
 > **참고** VS Code는 `Windows 탐색기`의 Context Menu에 등록되기 때문에 편집할 수 있는 파일을 선택하고 우클릭 하여 "연결 프로그램"을 찾아보면 VS Code로 해당 파일을 열 수 있습니다.
 
@@ -59,7 +59,7 @@ winget install Microsoft.VisualStudioCode
 
 이제 VS Code를 처음 실행하면 다음과 같은 화면이 됩니다.
 
-![VS Code 첫 실행](/assets/images/windows/miktex/cap034.png)
+<img src="{{ '/assets/images/windows/miktex/cap034.png' | relative_url }}" alt="VS Code 첫 실행">
 
 여기서 맨처음 해야 할 일은 VS Code의 인터페이스 언어를 한국어로 설정하는 것입니다. 낯선(?) 영어로 고민하지 말고 한국어 언어 지원을 활성화합니다.
 
@@ -69,11 +69,11 @@ winget install Microsoft.VisualStudioCode
 
 다음 그림은 마켓플레이스를 열었을 때의 모양을 보여줍니다. 아무것도 설치한 것이 없으면 몇 가지를 추천하는데 일단 우리와는 큰 상관 없는 것이 많으므로 한국어 팩부터 설치하기로 합니다.
 
-![마켓플레이스](/assets/images/windows/miktex/cap035.png)
+<img src="{{ '/assets/images/windows/miktex/cap035.png' | relative_url }}" alt="마켓플레이스">
 
 제일 위에 있는 검색 바에 "korean"이라고 써넣으면 한국어 언어 패키지를 설치할 수 있습니다. 다음 그림과 같이 진행됩니다. 언어 패키지가 활성화된 이후에 VS Code를 한 번 닫았다가 다시 실행하여야 합니다.
 
-![한국어 언어 팩 설치](/assets/images/windows/miktex/cap036.png)
+<img src="{{ '/assets/images/windows/miktex/cap036.png' | relative_url }}" alt="한국어 언어 팩 설치">
 
 > **참고** 마켓 플레이스를 눌러서 선택하지 않고 VS Code의 "모든 명령 보이기(Show all commands)"로 명령 팔레트(Command Palette)를 연 상태에서 직접 명령을 지정하여 설치하는 방법도 있습니다. `Configure Display Language` 명령을 입력하고 "Korean"을 선택하면 됩니다. 물론, 다시 시작하여야 합니다.
 
@@ -89,13 +89,13 @@ VS Code에는 명령 팔레트라고 부르는 조그마한 입력창이 존재�
 
 먼저, 작업 폴더를 하나 만듭니다. `탐색기`의 "문서" 폴더 아래에 "이지영의 레이텍 연습"이라는 폴더를 작성합니다. (우클릭 후에 "새로 만들기"에서 "폴더"를 선택하여 새 폴더를 만들 수 있습니다.)
 
-![새 폴더 만들기](/assets/images/windows/miktex/cap054.png)
+<img src="{{ '/assets/images/windows/miktex/cap054.png' | relative_url }}" alt="새 폴더 만들기">
 
 > **참고** MiKTeX의 장점 하나가 파일 이름에 한글, 띄어쓰기가 있어도 문서 처리에 문제가 발생하지 않는다는 점입니다. 그러므로 폴더와 파일 이름을 자유롭게 지어도 됩니다. Windows용 TeX Live는 그렇지 않아서 반드시 ASCII 문자로만 띄어쓰기 없이 짓도록 권장하고 있다는 사실과 비교해보세요.
 
 이제 VS Code에서 **탐색기 버튼**(왼쪽 바의 제일 위에 있는 아이콘)을 누르고 "폴더 열기"를 선택하여 방금 만든 폴더를 엽니다.
 
-![폴더 열기](/assets/images/windows/miktex/cap052.png)
+<img src="{{ '/assets/images/windows/miktex/cap052.png' | relative_url }}" alt="폴더 열기">
 
 이 상태에서 새로 편집하는 파일은 방금 연 폴더에 저장됩니다. 이곳이 작업 공간이 되는 것입니다.
 
@@ -107,7 +107,7 @@ VS Code에는 명령 팔레트라고 부르는 조그마한 입력창이 존재�
 
 다음 그림과 같은 상황은 위에 설명한 방법으로 연 작업 공간이 아닌 곳에 있는 파일을 열었을 때 주로 만나게 됩니다. 한번 열어보는 파일이라면 신뢰하는 것으로 하고 작업을 계속하면 되지만 지속적으로 작성하는 문서라면 작업 공간을 설정하는 것이 더 낫습니다.
 
-![신뢰할 수 있는 작업 공간](/assets/images/windows/miktex/cap037.png)
+<img src="{{ '/assets/images/windows/miktex/cap037.png' | relative_url }}" alt="신뢰할 수 있는 작업 공간">
 
 ## 사용자 설정
 
@@ -115,11 +115,11 @@ VS Code에는 명령 팔레트라고 부르는 조그마한 입력창이 존재�
 
 메뉴의 **파일** > **기본 설정** 아래의 하위 메뉴로 (1) 설정, (2) 바로가기 키, (3) 테마 등을 선택해둘 수 있는데, 우선 (1) 설정에 대해 간단히 알아봅니다.
 
-![사용자 설정](/assets/images/windows/miktex/cap057.png)
+<img src="{{ '/assets/images/windows/miktex/cap057.png' | relative_url }}" alt="사용자 설정">
 
 설정에서는 폰트 크기와 폰트 종류 정도를 지정해봅니다. 다음 그림은 현재 필자의 설정입니다.
 
-![폰트 설정](/assets/images/windows/miktex/cap058.png)
+<img src="{{ '/assets/images/windows/miktex/cap058.png' | relative_url }}" alt="폰트 설정">
 
 즉, 폰트 크기를 18로 하고 폰트 종류(font family)를 Consolas와 D2Coding을 차례로 지정했습니다. 이렇게 해두면 한글은 D2Coding으로, 영문자는 Consolas로 표시합니다. (폰트 크기를 18로 한 것은 필자의 시력 때문이므로 자신에게 맞게.)
 
@@ -150,7 +150,7 @@ LaTeXWorkshop을 설치합니다.
 
 `.tex` 파일을 열어보면 문법 강조가 활성화되는 것을 볼 수 있는데 이것은 latexworkshop의 기본 기능 가운데 하나입니다. `.tex` 파일을 열어서 latexworkshop이 활성화되면 `Ctrl+Alt+X` 단축키나 왼쪽 아이콘바의 **TeX** 아이콘을 눌러서 latexworkshop의 메뉴를 열어볼 수 있습니다. 이것을 훑어보면 어떤 일을 할 수 있는지 대략 알 수 있게 됩니다.
 
-![LaTeX Workshop 메뉴](/assets/images/windows/miktex/cap059.png)
+<img src="{{ '/assets/images/windows/miktex/cap059.png' | relative_url }}" alt="LaTeX Workshop 메뉴">
 
 > **참고** 현재까지 진행한 상태에서 tex 파일을 저장하면 latexworkshop의 기본 설정에 따라서 latexmk/pdflatex이 동작하면서 build를 시도합니다. 그러나 만약 소스가 XeLaTeX을 위한 것이라면 폰트 활용 관련 이런저런 에러가 발생했다면서 귀찮은 메시지가 나타날 것입니다. 아래 이어지는 설정을 적용하면 이 문제는 사라지므로 일단 무시합니다. 혹은, 아예 Perl이 동작하지 않는다는 메시지를 만날 수도 있는데 이것은 Perl 설치를 미루었기 때문입니다. VS Code가 채택하고 있는 기본 빌드 유틸리티가 Perl 스크립트인 `latexmk`이기 때문입니다.
 
@@ -190,7 +190,7 @@ latexworkshop을 처음 설치한 상태에서 (1) 기본 컴파일 엔진은 pd
 
 이제 `Ctrl+Alt+B`를 눌러서 현재 편집 중인 파일을 컴파일해봅니다. 컴파일 과정을 보려면 `Ctrl+Shift+U`를 누른 다음 "작업"을 "LaTeX Compiler"로 하면 됩니다.
 
-![컴파일 진행](/assets/images/windows/miktex/cap060.png)
+<img src="{{ '/assets/images/windows/miktex/cap060.png' | relative_url }}" alt="컴파일 진행">
 
 > **참고** 편집 중인 화면에서 컴파일러를 실행하는 방법은 여러 가지가 있는데, 단축키 이외에도 `Ctrl+Shift+P`로 명령 팔레트를 열어서 "recipe" 정도를 써넣으면 "LaTeXworkshop: Build with Recipes" 항목을 선택할 수 있고 이로부터 원하는 컴파일러를 동작하게 할 수 있습니다. 이것은 `Ctrl+Alt+X`로 latexworkshop 메뉴를 열어서 "Build Latex Project"에서 레시피를 고르는 것과 마찬가지입니다.
 
@@ -206,7 +206,7 @@ VS Code에는 내장 PDF Viewer가 있습니다. `Ctrl+Alt+V` 단축키를 누�
 
 > **참고** latexworkshop 메뉴에서 "View LaTeX PDF"의 "View in VS Code tab"이라는 명령으로 바로 열어볼 수 있습니다. 물론 명령 팔레트에서 "VSCode tab"으로 검색하는 편이 빠릅니다. 이 때문에 긴 글을 쓰는 사람에게 "저장시 빌드"가 편리할 때가 있다고 한 것입니다. 그러나 무수한 에러와 싸워야 하는 처음 사용자에게는 저장시 빌드가 오히려 방해가 되는 것이라서 이 안내서는 그것을 끄도록 안내했습니다.
 
-![PDF 미리보기](/assets/images/windows/miktex/cap070.jpg)
+<img src="{{ '/assets/images/windows/miktex/cap070.jpg' | relative_url }}" alt="PDF 미리보기">
 
 우리는 앞서 "저장시 빌드" 옵션을 꺼두었기 때문에 왼쪽 소스 편집창의 내용이 변해도 PDF의 변경을 바로 알아차릴 수 없지만 만약 "저장시 빌드"가 켜져 있다면 소스를 변경하고 저장하는 순간 컴파일이 이루어지고 PDF의 내용도 변화합니다.
 
