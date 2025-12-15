@@ -1,0 +1,108 @@
+// FAQ search
+.faq-search {
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid $border-color;
+    border-radius: 5px;
+    transition: border-color $transition-base;
+    
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+    }
+}
+
+// FAQ container
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-category {
+    margin-bottom: 3rem;
+    
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $primary-color;
+    }
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow $transition-base;
+    
+    &:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.active {
+        .faq-question {
+            background-color: $bg-light;
+            
+            .faq-toggle {
+                transform: rotate(45deg);
+            }
+        }
+        
+        .faq-answer {
+            max-height: 1000px;
+            padding: 1rem 1.5rem;
+        }
+    }
+}
+
+.faq-question {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color $transition-base;
+    
+    h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+        flex: 1;
+    }
+    
+    .faq-toggle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+        transition: transform $transition-base;
+        margin-left: 1rem;
+    }
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $transition-base, padding $transition-base;
+    padding: 0 1.5rem;
+    
+    p {
+        margin: 0;
+        color: $text-light;
+        line-height: 1.7;
+    }
+}
+
+

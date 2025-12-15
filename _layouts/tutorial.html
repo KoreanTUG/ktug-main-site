@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="tutorial">
+    <header class="tutorial-header">
+        <nav class="breadcrumb">
+            <a href="{{ '/' | relative_url }}">홈</a> / 
+            <span>{{ page.title }}</span>
+        </nav>
+        
+        <h1 class="tutorial-title">{{ page.title }}</h1>
+        
+        <div class="tutorial-meta">
+            {% if page.category %}
+            <span class="tutorial-category">{{ page.category }}</span>
+            {% endif %}
+            {% if page.difficulty %}
+            <span class="tutorial-difficulty difficulty-{{ page.difficulty | downcase }}">
+                난이도: {{ page.difficulty }}
+            </span>
+            {% endif %}
+            {% if page.date %}
+            <time class="tutorial-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+                {{ page.date | date: '%Y년 %m월 %d일' }}
+            </time>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="tutorial-content">
+        {{ content }}
+    </div>
+    
+    {% if page.prev_tutorial or page.next_tutorial %}
+    <nav class="tutorial-navigation">
+        {% if page.prev_tutorial %}
+        <a href="{{ page.prev_tutorial | relative_url }}" class="tutorial-nav-link tutorial-nav-prev">
+            ← 이전 튜토리얼
+        </a>
+        {% endif %}
+        {% if page.next_tutorial %}
+        <a href="{{ page.next_tutorial | relative_url }}" class="tutorial-nav-link tutorial-nav-next">
+            다음 튜토리얼 →
+        </a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</article>
+
+

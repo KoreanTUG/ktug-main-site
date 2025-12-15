@@ -1,0 +1,74 @@
+---
+layout: default
+title: 홈
+description: 한글텍사용자모임에 오신 것을 환영합니다
+---
+<div class="home">
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">{{ site.title }}</h1>
+            <p class="hero-description">{{ site.description }}</p>
+            <div class="hero-actions">
+                <a href="{{ '/tex-latex/' | relative_url }}" class="btn btn-primary">TeX과 LaTeX</a>
+                <a href="{{ '/tutorials/tex/overview/' | relative_url }}" class="btn btn-secondary">튜토리얼</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2>주요 서비스</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📚 튜토리얼</h3>
+                    <p>TeX 작업 환경 구축과 활용을 위한 단계별 가이드와 튜토리얼을 제공합니다.</p>
+                    <a href="{{ '/tutorials/' | relative_url }}" class="feature-link">튜토리얼 보기 →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>👥 커뮤니티</h3>
+                    <p>TeX 관련 정보 공유와 묻고 답하기 서비스를 제공하는 커뮤니티를 운영합니다</p>
+                    <a href="http://discourse.ktug.org" class="feature-link">커뮤니티로 이동 →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🐙 깃허브 조직</h3>
+                    <p>KTUG와 KTS의 활동 산출물들을 저장소별로 유지보수하고 공개합니다.</p>
+                    <a href="https://github.com/KoreanTUG" class="feature-link">더 알아보기 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="recent-tutorials">
+        <div class="container">
+            <h2>최근 게시물</h2>
+            <!--
+            <div class="tutorial-list">
+                {% assign sorted_tutorials = site.tutorials | sort: 'date' | reverse %}
+                {% for tutorial in sorted_tutorials limit: 3 %}
+                <div class="tutorial-card">
+                    <h3><a href="{{ tutorial.url | relative_url }}">{{ tutorial.title }}</a></h3>
+                    {% if tutorial.description %}
+                    <p>{{ tutorial.description }}</p>
+                    {% endif %}
+                    <div class="tutorial-meta">
+                        {% if tutorial.category %}
+                        <span class="category">{{ tutorial.category }}</span>
+                        {% endif %}
+                        {% if tutorial.difficulty %}
+                        <span class="difficulty">{{ tutorial.difficulty }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="section-footer">
+                <a href="{{ '/tutorials/' | relative_url }}" class="btn btn-outline">모든 튜토리얼 보기</a>
+            </div>
+            -->
+        </div>
+    </section>
+</div>
+
+

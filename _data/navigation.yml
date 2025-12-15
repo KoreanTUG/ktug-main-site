@@ -1,0 +1,31 @@
+- name: 처음으로
+  link: /
+- name: 소개
+  link: /about/
+  submenu:
+    - name: TeX과 LaTeX
+      link: /tex-latex/
+    - name: KTUG과 KTS
+      link: /ktug-kts/
+    - name: WWW.KTUG.ORG
+      link: /ktug-site/
+- name: 튜토리얼
+  link: /tutorials/tex/overview/
+  submenu:
+    - name: 개관
+      link: /tutorials/tex/overview/
+    - name: 시작하기 전에
+      link: /tutorials/tex/before-you-start/
+    - name: TeX 작업 환경 구축
+      link: /tutorials/tex/environment/
+    - name: LaTeX 활용
+      link: /tutorials/tex/application/
+- name: 커뮤니티
+  link: /ktug/
+  submenu:
+    - name: 게시판
+      link: http://discourse.ktug.org
+    - name: GitHub Organization
+      link: https://github.com/KoreanTUG
+
+

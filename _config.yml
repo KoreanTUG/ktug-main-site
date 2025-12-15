@@ -1,0 +1,64 @@
+# Site settings
+title: 한글 $\mathsf{\TeX}$ 사용자 모임
+description: $\mathsf{\TeX}$은 생각을 가장 정확하고 아름답게 표현하는 사람들의 언어입니다.
+baseurl: "/ktug-main-site" # the subpath of your site, e.g. /blog
+url: "https://koreantug.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections
+collections:
+  pages:
+    output: true
+  tutorials:
+    output: true
+    permalink: /tutorials/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+  - .git
+  - .gitignore
+  - README.md
+  - closet/
+
+# Plugins (GitHub Pages supported plugins)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Theme settings
+theme: null
+
+# Language
+lang: ko
+locale: ko_KR
+
+# Defaults
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "_tutorials"
+      type: "tutorials"
+    values:
+      layout: "tutorial"
+

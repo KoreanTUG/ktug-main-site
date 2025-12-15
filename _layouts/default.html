@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    
+    {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+    <!-- 추가 아이콘 파일이 있으면 아래 주석을 해제하세요 -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}"> -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}"> -->
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    {% if layout.styles %}
+        {% for style in layout.styles %}
+            <link rel="stylesheet" href="{{ style | relative_url }}">
+        {% endfor %}
+    {% endif %}
+    
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],  // 인라인 수식
+                displayMath: [['\\[', '\\]'], ['$$', '$$']], // 블록 수식
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    {% include header.html %}
+    
+    <main class="main-content">
+        {{ content }}
+    </main>
+    
+    {% include footer.html %}
+    
+    {% if layout.scripts %}
+        {% for script in layout.scripts %}
+            <script src="{{ script | relative_url }}"></script>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
+
+

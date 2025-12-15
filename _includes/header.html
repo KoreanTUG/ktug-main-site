@@ -1,0 +1,136 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="{{ '/' | relative_url }}" class="site-logo">
+                <img src="{{ '/assets/images/ktug-lion.png' | relative_url }}" alt="{{ site.title }}" class="site-logo-image">
+                <h1>{{ site.title }}</h1>
+            </a>
+            
+            <nav class="site-nav">
+                <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    {% for item in site.data.navigation %}
+                    {% assign item_is_external = false %}
+                    {% if item.link contains 'http://' or item.link contains 'https://' %}
+                        {% assign item_is_external = true %}
+                    {% endif %}
+                    <li class="{% if item.submenu %}has-submenu{% endif %}">
+                        <a href="{% if item_is_external %}{{ item.link }}{% else %}{{ item.link | relative_url }}{% endif %}" 
+                           {% if page.url == item.link or page.url == '/tex-latex/' or page.url == '/ktug/' or page.url == '/kts/' or page.url == '/tex-start/' or page.url == '/tex-install/' or page.url == '/tex-usage/' %}class="active"{% endif %}
+                           {% if item_is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                            {{ item.name }}
+                            {% if item.submenu %}<span class="submenu-toggle">▼</span>{% endif %}
+                        </a>
+                        {% if item.submenu %}
+                        <ul class="submenu">
+                            {% for subitem in item.submenu %}
+                            {% assign is_external = false %}
+                            {% if subitem.link contains 'http://' or subitem.link contains 'https://' %}
+                                {% assign is_external = true %}
+                            {% endif %}
+                            <li>
+                                <a href="{% if is_external %}{{ subitem.link }}{% else %}{{ subitem.link | relative_url }}{% endif %}"
+                                   {% if page.url == subitem.link %}class="active"{% endif %}
+                                   {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                    {{ subitem.name }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+        });
+    }
+    
+    // 하위 메뉴 토글 (데스크톱 및 모바일 모두)
+    const submenuItems = document.querySelectorAll('.has-submenu > a');
+    
+    submenuItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            const parent = this.parentElement;
+            const submenu = parent.querySelector('.submenu');
+            const isMobile = window.innerWidth <= 768;
+            const isSubmenuOpen = parent.classList.contains('submenu-open');
+            // CSS hover로 인해 하위 메뉴가 실제로 보이는지 확인
+            const isSubmenuVisible = submenu && window.getComputedStyle(submenu).display !== 'none';
+            
+            // 모바일에서는 항상 토글하고 링크 이동 방지
+            if (isMobile) {
+                e.preventDefault();
+                parent.classList.toggle('submenu-open');
+            } else {
+                // 데스크톱에서는 하위 메뉴가 보이면 토글만, 안 보이면 링크로 이동
+                if (isSubmenuOpen || isSubmenuVisible) {
+                    // 하위 메뉴가 보이면 토글만 (링크 이동 방지)
+                    e.preventDefault();
+                    
+                    // 다른 하위 메뉴 닫기
+                    document.querySelectorAll('.has-submenu').forEach(function(menu) {
+                        if (menu !== parent) {
+                            menu.classList.remove('submenu-open');
+                        }
+                    });
+                    
+                    // 현재 하위 메뉴 토글
+                    if (isSubmenuOpen) {
+                        parent.classList.remove('submenu-open');
+                    } else {
+                        parent.classList.add('submenu-open');
+                    }
+                } else {
+                    // 하위 메뉴가 안 보이면 링크로 이동 (토글하지 않음)
+                    // 링크가 정상적으로 동작하도록 preventDefault 호출하지 않음
+                    // 다른 하위 메뉴만 닫기
+                    document.querySelectorAll('.has-submenu').forEach(function(menu) {
+                        if (menu !== parent) {
+                            menu.classList.remove('submenu-open');
+                        }
+                    });
+                }
+            }
+        });
+    });
+    
+    // 하위 메뉴 외부 클릭 시 닫기
+    document.addEventListener('click', function(e) {
+        // 하위 메뉴 항목 클릭은 링크가 정상 동작하도록 허용
+        if (e.target.closest('.submenu a')) {
+            // 하위 메뉴 항목 클릭 시 하위 메뉴 닫기 (링크는 정상 동작)
+            setTimeout(function() {
+                document.querySelectorAll('.has-submenu').forEach(function(menu) {
+                    menu.classList.remove('submenu-open');
+                });
+            }, 0);
+            return;
+        }
+        // 하위 메뉴 외부 클릭 시에만 닫기
+        if (!e.target.closest('.has-submenu')) {
+            document.querySelectorAll('.has-submenu').forEach(function(menu) {
+                menu.classList.remove('submenu-open');
+            });
+        }
+    });
+});
+</script>

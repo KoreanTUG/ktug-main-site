@@ -1,0 +1,72 @@
+---
+layout: default
+title: 404 - 페이지를 찾을 수 없습니다
+permalink: /404.html
+---
+
+<div class="error-page">
+    <div class="container">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>페이지를 찾을 수 없습니다</h2>
+            <p>요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다.</p>
+            <div class="error-actions">
+                <a href="{{ '/' | relative_url }}" class="btn btn-primary">홈으로 돌아가기</a>
+                <a href="{{ '/tutorials/' | relative_url }}" class="btn btn-secondary">배우기 보기</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #1a6fb0;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.error-content p {
+    font-size: 1.125rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .error-content h1 {
+        font-size: 5rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+
