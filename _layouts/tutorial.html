@@ -24,6 +24,9 @@ layout: default
                 {{ page.date | date: '%Y년 %m월 %d일' }}
             </time>
             {% endif %}
+            <button onclick="printToPDF()" class="tutorial-pdf-button" title="이 페이지를 PDF로 저장">
+                📄 PDF로 저장
+            </button>
         </div>
     </header>
     
@@ -47,4 +50,80 @@ layout: default
     {% endif %}
 </article>
 
+<script>
+function printToPDF() {
+    // 인쇄 스타일 적용
+    const printStyle = document.createElement('style');
+    printStyle.id = 'tutorial-print-style';
+    printStyle.textContent = `
+        @media print {
+            @page {
+                margin: 2cm;
+            }
+            body * {
+                visibility: hidden;
+            }
+            .tutorial, .tutorial * {
+                visibility: visible;
+            }
+            .tutorial {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 0;
+            }
+            .tutorial-header .breadcrumb,
+            .tutorial-navigation,
+            .tutorial-pdf-button,
+            header,
+            footer,
+            .main-content > *:not(.tutorial),
+            nav {
+                display: none !important;
+            }
+            .tutorial-content {
+                max-width: 100%;
+                padding: 0;
+            }
+            .tutorial-content img {
+                max-width: 100%;
+                height: auto;
+                page-break-inside: avoid;
+            }
+            .tutorial-title {
+                page-break-after: avoid;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+            }
+            pre, code {
+                page-break-inside: avoid;
+            }
+            table {
+                page-break-inside: avoid;
+            }
+        }
+    `;
+    
+    // 기존 스타일이 있으면 제거
+    const existingStyle = document.getElementById('tutorial-print-style');
+    if (existingStyle) {
+        existingStyle.remove();
+    }
+    
+    document.head.appendChild(printStyle);
+    
+    // 인쇄 대화상자 열기
+    window.print();
+    
+    // 스타일 제거 (인쇄 후)
+    window.addEventListener('afterprint', function() {
+        const style = document.getElementById('tutorial-print-style');
+        if (style) {
+            style.remove();
+        }
+    }, { once: true });
+}
+</script>
 

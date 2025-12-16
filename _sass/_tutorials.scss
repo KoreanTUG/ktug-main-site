@@ -49,6 +49,7 @@
     gap: 0.5rem;
     margin-top: 1rem;
     font-size: 0.85rem;
+    align-items: center;
 }
 
 .tutorial-category,
@@ -83,6 +84,27 @@
 .tutorial-date,
 time {
     color: $text-light;
+}
+
+.tutorial-pdf-button {
+    padding: 0.5rem 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color $transition-base, transform $transition-base;
+    margin-left: auto;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: translateY(-1px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
 }
 
 // Tutorial filters
