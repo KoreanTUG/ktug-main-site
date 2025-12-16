@@ -37,5 +37,7 @@ Desktop.ini
 *.bak
 *.cache
 
-# Backup files
+# Local files
+SETUP.md
+GITHUB_SETUP.md
 closet/
