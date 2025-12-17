@@ -20,9 +20,9 @@ kramdown:
 collections:
   pages:
     output: true
-  tutorials:
+  getting_started:
     output: true
-    permalink: /tutorials/:name/
+    permalink: /getting-started/:name/
 
 # Exclude from processing
 exclude:
@@ -59,8 +59,8 @@ defaults:
     values:
       layout: "page"
   - scope:
-      path: "_tutorials"
-      type: "tutorials"
+      path: "_getting_started"
+      type: "getting_started"
     values:
       layout: "tutorial"
 

@@ -9,17 +9,17 @@
       link: /ktug-kts/
     - name: WWW.KTUG.ORG
       link: /ktug-site/
-- name: 튜토리얼
-  link: /tutorials/tex/overview/
+- name: 시작하기
+  link: /getting-started/overview/
   submenu:
     - name: 개관
-      link: /tutorials/tex/overview/
+      link: /getting-started/overview/
     - name: 시작하기 전에
-      link: /tutorials/tex/before-you-start/
+      link: /getting-started/before-you-start/
     - name: TeX 작업 환경 구축
-      link: /tutorials/tex/environment/
+      link: /getting-started/environment/
     - name: LaTeX 활용
-      link: /tutorials/tex/application/
+      link: /getting-started/application/
 - name: 커뮤니티
   link: /ktug/
   submenu:
