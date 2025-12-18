@@ -1,14 +1,14 @@
 ---
 layout: tutorial
-title: TeX Live로 구축하는 작업 환경
-description: Tex Live 중심 작업 환경 방법과 절차를 안내합니다.
+title: Windows에서 TeX Live로 TeX 시작하기
+description: Windows에서 TeX Live로 TeX을 시작하는 방법을 안내합니다.
 permalink: /getting-started/windows-texlive/
 next_tutorial: /getting-started/windows-texlive/prep/
 ---
 
 ## 개요
 
-이 안내서는 Windows용 TeX 배포판인 TeX Live를 중심으로 작업 환경의 구축 방법을 단계별로 안내합니다.
+이 안내서는 Windows에서 TeX Live를 중심으로 TeX를 시작하는 방법과 절차를 단계별로 안내합니다.
 
 > **참고** 이 안내서는 <a href="{{ '/assets/documents/instguide24.pdf' | relative_url }}">MiKTeX으로 구축하는 작업 환경</a>(Nova de Hi, likesam, aud, 2025)에 기반하여 작성되었습니다. 저자들께 감사드립니다.
 
