@@ -10,22 +10,24 @@
     - name: WWW.KTUG.ORG
       link: /ktug-site/
 - name: 시작하기
-  link: /getting-started/overview/
+  link: /getting-started/
   submenu:
-    - name: 개관
-      link: /getting-started/overview/
     - name: 시작하기 전에
       link: /getting-started/before-you-start/
-    - name: TeX 작업 환경 구축
-      link: /getting-started/environment/
-    - name: LaTeX 활용
-      link: /getting-started/application/
+    - name: Windows에서 TeX 시작하기 (MiKTeX)
+      link: /getting-started/windows-miktex/
+    - name: Windows에서 TeX 시작하기 (TeX Live)
+      link: /getting-started/windows-texlive/
+    - name: macOS에서 TeX 시작하기 (MacTeX)
+      link: /getting-started/macos-mactex/
 - name: 커뮤니티
   link: /ktug/
   submenu:
-    - name: 게시판
+    - name: KTUG 마당
+      link: http://discourse.ktug.org
+    - name: Q&A 마당
+      link: http://discourse.ktug.org
+    - name: FAQ 마당
       link: http://discourse.ktug.org
     - name: GitHub Organization
       link: https://github.com/KoreanTUG
-
-
