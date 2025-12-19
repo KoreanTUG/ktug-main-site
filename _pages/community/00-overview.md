@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 커뮤니티
-description: KTUG 커뮤니티로를 안내합니다.
+description: KTUG 커뮤니티를 안내합니다.
 permalink: /community/
 ---
 
