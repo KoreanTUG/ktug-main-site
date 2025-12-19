@@ -7,18 +7,10 @@ prev_tutorial: /getting-started/macos-mactex/first-doc/
 next_tutorial: /getting-started/macos-mactex/ktug-repo/
 ---
 
-## 시스템 폰트 폴더 위치 설정
-
-시스템에 설치된 폰트를 XeLaTeX에서 원활히 사용하기 위해서는 XeTeX이 폰트를 활용할 때 의존하는 fontconfig 라이브러리에게 현재 시스템의 폰트 폴더 위치를 두 곳 알려주어야 합니다. 그 두 곳이란 아래와 같습니다.
-
-- `C:\Windows\Fonts`
-- `C:\Users\<username>\AppData\Local\Microsoft\Windows\Fonts`
-
-이를 위해 <a href="{{ '/assets/downloads/genlocalconf.zip' | relative_url }}">genlocalconf.zip</a> 파일을 내려받아 아무 곳에나 압축을 풀고, 나오는 `genlocalconf.bat` 파일을 더블클릭하여 실행하면 됩니다.
-
-> **참고** LuaLaTeX은 luaotfload 패키지를 이용하여 독자적으로 폰트를 관리합니다. 따라서 대부분의 경우 별도의 조치가 필요하지 않습니다. Windows에서 genlocalfont를 하지 않아도 시스템 폰트와 TEXMF 폰트를 잘 인식하고 로드할 것입니다.
+최근 예제 폰트로 자주 사용되는 Noto Korean 폰트를 설치하고 사용해 봅니다.
 
 ## Noto Korean 폰트 설치
+
 ### 폰트 선택
 
 Noto Korean 폰트는 종류가 서너 가지 있습니다.
@@ -41,11 +33,11 @@ Noto Korean 폰트는 종류가 서너 가지 있습니다.
 
 ### 폰트 설치
 
-Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있습니다. otf 파일을 전체 선택한 다음 `Shift`+우클릭 하여 "모든 사용자용으로 설치"를 선택합니다.
+Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있습니다. `파인더`에서 otf 파일을 전체 선택한 다음 우클릭 하여 "Open"을 선택합니다.
 
-> **참고** 그냥 우클릭 후에 설치를 선택해도 설치는 가능하지만 여기서는 "모든 사용자용으로 설치"하는 것으로 기술합니다. 폰트 호출 부분을 참고하세요.
+<img src="{{ '/assets/images/macos-mactex/finder-font-inst.png' | relative_url }}" alt="폰트 설치">
 
-<img src="{{ '/assets/images/macos-mactex/expl-font-inst.png' | relative_url }}" alt="폰트 설치">
+그러면 아래와 같이 `폰트 북` 앱 창이 표시되는데 **Install**을 누르면 폰트가 설치됩니다. 설치가 끝나면 폰트 북을 종료합니다.
 
 ### 설치 상태 점검
 
@@ -64,13 +56,21 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 \end{document}
 ```
 
-<img src="{{ '/assets/images/macos-mactex/texworks-noto.png' | relative_url }}" alt="폰트 테스트">
+<img src="{{ '/assets/images/macos-mactex/texshop-font-test.png' | relative_url }}" alt="Noto 폰트 테스트">
+
+폰트가 제대로 설치되었으면 프리뷰 창이 제대로 표시된다.
+
+<img src="{{ '/assets/images/macos-mactex/texshop-new-font-preview.png' | relative_url }}" alt="Noto 폰트 PDF 프리뷰">
 
 ## 추가 폰트 설치
 
-폰트 파일을 인터넷 등에서 구하여 설치함에 있어서 우클릭 후에 "설치"를 선택한 경우(즉, 자신만을 위하여 설치한 경우)에도 대부분의 폰트는 사용 가능합니다. **파일 이름으로** 호출하는 경우에는 어떠한 제약도 없고, **폰트 이름으로** 호출하려 하는 경우 재시동이 필요할 수 있습니다.
-   
-> **참고** 만약 "폰트 이름으로" 호출이 잘 되지 않는 폰트가 있다면 "모든 사용자용으로 설치"하면 됩니다.
+폰트 파일을 인터넷 등에서 구하여 설치함에 있어서 `파인더`에서 우클릭 후에 "Open"을 선택하여 `폰트 북`으로 설치하면 대부분의 폰트가 사용 가능합니다. 
+
+폰트를 설치할 때에 반드시 `파인더`와 `폰트 북`을 이용해야 하는 것은 아닙니다. 아래와 같이 폰트 파일이 있는 폴더에서 `터미널`을 열어서 `cp` 명령을 수행하여 설치할 수도 있습니다.
+
+```zsh
+cp NotoSerifCJKkr-Regular.otf ~/Library/Fonts
+```
 
 ## 다음 단계
 

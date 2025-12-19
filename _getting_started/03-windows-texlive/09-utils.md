@@ -2,9 +2,9 @@
 layout: tutorial
 title: 기타 유틸리티
 description: Python, SumatraPDF 등 추가 유틸리티를 설치하고 설정하는 방법을 학습합니다.
-permalink: /getting-started/windows-texlive/utils/
-prev_tutorial: /getting-started/windows-texlive/lshort/
-next_tutorial: /getting-started/windows-texlive/ktug-repo-adv/
+permalink: /getting-started/macos-mactex/utils/
+prev_tutorial: /getting-started/macos-mactex/lshort/
+next_tutorial: /getting-started/macos-mactex/ktug-repo-adv/
 ---
 
 ## Python
@@ -90,5 +90,5 @@ arara 유틸리티를 사용하려면 Java Runtime이 설치하여야 합니다.
 
 ## 다음 단계
 
-기타 유틸리티 설치가 완료되었습니다. 필요에 따라 <a href="{{ '/getting-started/windows-texlive/ktug-repo-adv/' | relative_url }}">KTUG 사설저장소 추가 설정</a>을 참고하세요.
+기타 유틸리티 설치가 완료되었습니다. 필요에 따라 <a href="{{ '/getting-started/macos-mactex/ktug-repo-adv/' | relative_url }}">KTUG 사설저장소 추가 설정</a>을 참고하세요.
 

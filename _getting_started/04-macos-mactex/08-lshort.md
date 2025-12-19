@@ -21,7 +21,7 @@ texdoc lshort-ko
 
 ## 다음 단계
 
-VS Code와 LaTeXworkshop은 너무 강력한 도구라서 모든 기능을 전부 설명하는 것이 거의 불가능합니다. 그것은 LaTeX이 너무 강력한 도구라서 그것으로 무엇을 할 수 있는지 설명하는 것이 불가능한 것과 거의 같습니다.
+VS Code와 LaTeX Workshop은 너무 강력한 도구라서 모든 기능을 전부 설명하는 것이 거의 불가능합니다. 그것은 LaTeX이 너무 강력한 도구라서 그것으로 무엇을 할 수 있는지 설명하는 것이 불가능한 것과 거의 같습니다.
 
 이제 기본적인 환경 설정이 완료되었습니다. 필요에 따라 <a href="{{ '/getting-started/macos-mactex/utils/' | relative_url }}">기타 유틸리티</a>를 참고하세요.
 
