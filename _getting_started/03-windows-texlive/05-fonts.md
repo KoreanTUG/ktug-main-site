@@ -2,9 +2,9 @@
 layout: tutorial
 title: 폰트 설치
 description: 한글 문서 작성을 위해 트루타입/오픈타입을 설정하는 방법을 알아봅니다.
-permalink: /getting-started/macos-mactex/fonts/
-prev_tutorial: /getting-started/macos-mactex/first-doc/
-next_tutorial: /getting-started/macos-mactex/ktug-repo/
+permalink: /getting-started/windows-texlive/fonts/
+prev_tutorial: /getting-started/windows-texlive/first-doc/
+next_tutorial: /getting-started/windows-texlive/ktug-repo/
 ---
 
 ## 시스템 폰트 폴더 위치 설정
@@ -45,7 +45,7 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 
 > **참고** 그냥 우클릭 후에 설치를 선택해도 설치는 가능하지만 여기서는 "모든 사용자용으로 설치"하는 것으로 기술합니다. 폰트 호출 부분을 참고하세요.
 
-<img src="{{ '/assets/images/macos-mactex/expl-font-inst.png' | relative_url }}" alt="폰트 설치">
+<img src="{{ '/assets/images/windows-texlive/expl-font-inst.png' | relative_url }}" alt="폰트 설치">
 
 ### 설치 상태 점검
 
@@ -64,7 +64,7 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 \end{document}
 ```
 
-<img src="{{ '/assets/images/macos-mactex/texworks-noto.png' | relative_url }}" alt="폰트 테스트">
+<img src="{{ '/assets/images/windows-texlive/texworks-noto.png' | relative_url }}" alt="폰트 테스트">
 
 ## 추가 폰트 설치
 
@@ -74,4 +74,4 @@ Serif 폰트를 풀어둔 폴더를 열면 몇 개의 otf 폰트 파일이 있�
 
 ## 다음 단계
 
-폰트 설치가 완료되었습니다. 이제 <a href="{{ '/getting-started/macos-mactex/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>로 진행하세요.
+폰트 설치가 완료되었습니다. 이제 <a href="{{ '/getting-started/windows-texlive/ktug-repo/' | relative_url }}">KTUG 사설저장소 패키지</a>로 진행하세요.

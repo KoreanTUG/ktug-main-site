@@ -20,6 +20,6 @@ KTUG에서 제공하는 TeX 시작하기의 구성은 다음과 같습니다.
 
 ### macOS
 
-- <a href="{{ '/getting-started/macos-mactex/' | relative_url }}">macOS에서 TeX 시작하기 (MacTeX)</a>: macOS에서 MacTeX를 중심으로 TeX를 시작하는 방법과 절차를 단계별로 안내합니다.
+- <a href="{{ '/getting-started/windows-texlive/' | relative_url }}">macOS에서 TeX 시작하기 (MacTeX)</a>: macOS에서 MacTeX를 중심으로 TeX를 시작하는 방법과 절차를 단계별로 안내합니다.
 
 

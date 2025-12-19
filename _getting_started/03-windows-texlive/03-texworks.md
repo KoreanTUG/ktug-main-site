@@ -2,9 +2,9 @@
 title: TeXworks 설정
 layout: tutorial
 description: TeX Live 기본 에디터인 TeXworks를 한글 문서 작성을 위해 설정합니다.
-permalink: /getting-started/macos-mactex/texworks/
-prev_tutorial: /getting-started/macos-mactex/install/
-next_tutorial: /getting-started/macos-mactex/first-doc/
+permalink: /getting-started/windows-texlive/texworks/
+prev_tutorial: /getting-started/windows-texlive/install/
+next_tutorial: /getting-started/windows-texlive/first-doc/
 ---
 
 TeX 문서를 편집하기 위한 에디터는 여러 종류가 있으므로 자신의 취향에 맞게 하여 쓰는 것이 가장 좋습니다. 다른 선택의 여지가 없다면 TeX Live가 기본 제공하는 [TeXworks](https://www.tug.org/texworks) 에디터를 쓸 수 있습니다.
@@ -15,7 +15,7 @@ TeX 문서를 편집하기 위한 에디터는 여러 종류가 있으므로 자
 
 TeXworks를 실행하여 **편집** > **환경 설정**을 눌러서 환경 설정 창을 엽니다.
 
-<img src="{{ '/assets/images/macos-mactex/texworks-edit.png' | relative_url }}" alt="TeXworks 환경 설정 열기">
+<img src="{{ '/assets/images/windows-texlive/texworks-edit.png' | relative_url }}" alt="TeXworks 환경 설정 열기">
 
 ### 편집기 탭
 
@@ -24,17 +24,17 @@ TeXworks를 실행하여 **편집** > **환경 설정**을 눌러서 환경 설�
 - **폰트**: 자신이 선호하는 코딩용 폰트와 크기를 설정합니다. 잘 모르겠으면 Consolas 11pt로 하는 것을 권장합니다.
 - **기타**: 줄번호 표시, 줄넘김, 현재 줄 강조, 문법 강조: LaTeX
 
-<img src="{{ '/assets/images/macos-mactex/texworks-editor-tab.png' | relative_url }}" alt="편집기 설정">
+<img src="{{ '/assets/images/windows-texlive/texworks-editor-tab.png' | relative_url }}" alt="편집기 설정">
 
 ### 문서처리 탭
 
 다른 것은 건드리지 말고 "기본값"을 `XeLaTeX`으로 선택합니다.
 
-<img src="{{ '/assets/images/macos-mactex/texworks-doc-proc-tab.png' | relative_url }}" alt="문서처리 설정">
+<img src="{{ '/assets/images/windows-texlive/texworks-doc-proc-tab.png' | relative_url }}" alt="문서처리 설정">
 
 여기서 **확인** 버튼을 누르고 TeXworks 실행을 종료한 다음 다시 실행합니다.
 
 ## 다음 단계
 
-TeXworks 설정이 완료되었습니다. 이제 <a href="{{ '/getting-started/macos-mactex/first-doc/' | relative_url }}">첫 문서 작성하기</a>로 진행하세요.
+TeXworks 설정이 완료되었습니다. 이제 <a href="{{ '/getting-started/windows-texlive/first-doc/' | relative_url }}">첫 문서 작성하기</a>로 진행하세요.
 
