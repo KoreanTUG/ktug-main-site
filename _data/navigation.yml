@@ -20,6 +20,8 @@
       link: /getting-started/windows-texlive/
     - name: macOS에서 TeX 시작하기 (MacTeX)
       link: /getting-started/macos-mactex/
+- name: 읽을거리
+  link: /readings/
 - name: 커뮤니티
   link: /ktug/
   submenu:
