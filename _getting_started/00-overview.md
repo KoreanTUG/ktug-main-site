@@ -2,7 +2,7 @@
 layout: page
 title: 시작하기 소개
 description: 시작하기의 구성을 소개합니다.
-permalink: /getting-started/overview/
+permalink: /getting-started/
 ---
 
 KTUG에서 제공하는 TeX 시작하기의 구성은 다음과 같습니다.
