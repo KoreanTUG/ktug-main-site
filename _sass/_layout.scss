@@ -23,12 +23,12 @@
     gap: 0.75rem;
     
     .site-logo-image {
-        height: 2.5rem;
+        height: 3.75rem;
         width: auto;
         display: block;
         
         @media (max-width: $breakpoint-md) {
-            height: 2rem;
+            height: 3rem;
         }
     }
     
