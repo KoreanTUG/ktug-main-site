@@ -4,11 +4,11 @@
   link: /about/
   submenu:
     - name: TeX과 LaTeX
-      link: /tex-latex/
+      link: /about/tex-latex/
     - name: KTUG과 KTS
-      link: /ktug-kts/
+      link: /about/ktug-kts/
     - name: WWW.KTUG.ORG
-      link: /ktug-site/
+      link: /about/ktug-site/
 - name: 시작하기
   link: /getting-started/
   submenu:
@@ -23,7 +23,7 @@
 - name: 읽을거리
   link: /readings/
 - name: 커뮤니티
-  link: /ktug/
+  link: /community/
   submenu:
     - name: KTUG 마당
       link: http://discourse.ktug.org

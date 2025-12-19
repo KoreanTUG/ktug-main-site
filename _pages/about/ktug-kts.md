@@ -2,7 +2,7 @@
 layout: page
 title: KTUG과 KTS
 description: 한글텍사용자모임(KTUG)과 한국텍학회(KTS) 소개
-permalink: /ktug-kts/
+permalink: /about/ktug-kts/
 ---
 
 ## 한글텍사용자모임
@@ -20,5 +20,5 @@ KTS는 다양한 학계, 산업계 및 연구기관 종사자들이 TeX과 관�
 
 ## 참고
 
-- [KTS 창립 취지문](/kts-founding/)
-- [KTUG 및 KTS 연혁](/ktug-kts-hist)
+- [KTS 창립 취지문](/about/kts-founding/)
+- [KTUG 및 KTS 연혁](/about/ktug-kts-hist)

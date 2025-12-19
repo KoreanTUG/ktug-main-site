@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 시작하기 소개
+title: 시작하기
 description: 시작하기의 구성을 소개합니다.
 permalink: /getting-started/
 ---

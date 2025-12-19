@@ -2,7 +2,7 @@
 layout: page
 title: KTUG 및 KTS 연혁
 description: 한글텍사용자모임(KTUG) 및 한국텍학회(KTS) 연혁
-permalink: /ktug-kts-hist/
+permalink: /about/ktug-kts-hist/
 ---
 
 ## 2001년∼2005년

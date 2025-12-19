@@ -2,7 +2,7 @@
 layout: page
 title: TeX과 LaTeX
 description: TeX과 LaTeX 소개
-permalink: /tex-latex/
+permalink: /about/tex-latex/
 ---
 
 ## TeX: 조판의 예술과 과학
