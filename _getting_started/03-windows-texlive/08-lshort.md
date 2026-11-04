@@ -17,7 +17,7 @@ next_tutorial: /getting-started/windows-texlive/utils/
 texdoc lshort-ko
 ```
 
-**LaTeXe 입문 --- 143분 동안 익히는 LaTeXe**라는 제목의 문서인데, 이제 차근차근 이 문서의 내용을 따라하면서 공부하면 됩니다. 이 책을 읽고나면 "LaTeX"을 "라텍스"라고 읽으면 안된다는 것을 알게 됩니다.
+**LaTeX2e 입문 --- 143분 동안 익히는 LaTeX2e**라는 제목의 문서인데, 이제 차근차근 이 문서의 내용을 따라하면서 공부하면 됩니다. 이 책을 읽고나면 "LaTeX"을 "라텍스"라고 읽으면 안된다는 것을 알게 됩니다.
 
 ## 다음 단계
 
