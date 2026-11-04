@@ -9,7 +9,7 @@ permalink: /readings/
 
 - <a href="{{ '/assets/documents/first-latex-doc-korean.pdf' | relative_url }}">LaTeX 맛보기</a> (Nova de Hi 옮김, 2025)
 - <a href="{{ '/assets/documents/lshort-ko.pdf' | relative_url }}">LaTeX2e 입문</a> (김강수, 조인성 옮김, 2025)
-- <a href="{{ '/assets/documents/latex4wp-ko.pdff' | relative_url }}">워드 프로세서 사용자를 위한 LaTeX</a> (KTUG 문서화 프로젝트 팀 옮김, 2025)
+- <a href="{{ '/assets/documents/latex4wp-ko.pdf' | relative_url }}">워드 프로세서 사용자를 위한 LaTeX</a> (KTUG 문서화 프로젝트 팀 옮김, 2025)
 
 ## TeX 설치와 환경 구축
 
