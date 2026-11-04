@@ -11,22 +11,15 @@
 }
 
 .hero-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    // 소개 문구가 제목이므로 이름보다 길다: 너무 크지 않게, 두 줄까지 자연스럽게
+    max-width: 24em;
+    margin: 0 auto 2rem;
+    font-size: 2.25rem;
+    line-height: 1.4;
     color: white;
     
     @media (max-width: $breakpoint-md) {
-        font-size: 1.75rem;
-    }
-}
-
-.hero-description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    
-    @media (max-width: $breakpoint-md) {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -68,6 +61,9 @@
     }
     
     h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
         margin-bottom: 1rem;
         color: $primary-color;
     }
@@ -185,3 +181,21 @@ section {
 }
 
 
+
+// 카드 제목 앞 아이콘(_includes/icons/*.svg)
+.feature-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    
+    .icon {
+        width: 1.35rem;
+        height: 1.35rem;
+    }
+}
