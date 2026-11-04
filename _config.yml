@@ -1,6 +1,6 @@
 # Site settings
-title: 한글 $\mathsf{\TeX}$ 사용자 모임
-description: $\mathsf{\TeX}$은 생각을 가장 정확하고 아름답게 표현하는 사람들의 언어입니다.
+title: 한글 TeX 사용자 모임
+description: TeX은 생각을 가장 정확하고 아름답게 표현하는 사람들의 언어입니다.
 baseurl: "/ktug-main-site" # the subpath of your site, e.g. /blog
 url: "https://koreantug.github.io" # the base hostname & protocol for your site
 

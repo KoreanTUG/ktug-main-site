@@ -16,7 +16,7 @@
     color: white;
     
     @media (max-width: $breakpoint-md) {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -90,6 +90,10 @@
 // Section styles
 section {
     margin-bottom: 4rem;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
     
     h2 {
         text-align: center;

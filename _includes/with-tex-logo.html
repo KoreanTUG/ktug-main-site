@@ -1,0 +1,6 @@
+{%- comment -%}
+  include.text 안의 'TeX'을 CSS로 그린 TeX 로고로 바꿔 출력한다.
+  사이트 이름처럼 'LaTeX' 등이 섞이지 않은 짧은 문구에만 쓴다.
+{%- endcomment -%}
+{%- capture tex_logo -%}{% include tex-logo.html %}{%- endcapture -%}
+{{- include.text | replace: 'TeX', tex_logo -}}

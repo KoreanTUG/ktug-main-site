@@ -15,6 +15,8 @@ body {
     line-height: $line-height-base;
     color: $text-color;
     background-color: $bg-color;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -184,3 +186,16 @@ tbody tr {
 }
 
 
+
+// TeX 로고 (CSS로 그린다. 마크업은 _includes/tex-logo.html)
+.tex-logo {
+    white-space: nowrap;
+
+    .tex-logo-e {
+        display: inline-block;
+        text-transform: uppercase;
+        vertical-align: -0.5ex;
+        line-height: 0;
+        margin: 0 -0.125em 0 -0.1667em;
+    }
+}

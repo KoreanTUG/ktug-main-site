@@ -6,8 +6,8 @@ description: 한글텍사용자모임에 오신 것을 환영합니다
 <div class="home">
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">{{ site.title }}</h1>
-            <p class="hero-description">{{ site.description }}</p>
+            <h1 class="hero-title">{% include with-tex-logo.html text=site.title %}</h1>
+            <p class="hero-description">{% include with-tex-logo.html text=site.description %}</p>
             <div class="hero-actions">
                 <a href="{{ '/about/tex-latex/' | relative_url }}" class="btn btn-primary">TeX과 LaTeX</a>
                 <a href="{{ '/getting-started/' | relative_url }}" class="btn btn-secondary">시작하기</a>
@@ -40,35 +40,10 @@ description: 한글텍사용자모임에 오신 것을 환영합니다
         </div>
     </section>
     
-    <section class="recent-tutorials">
-        <div class="container">
-            <h2>최근 게시물</h2>
-            <!--
-            <div class="tutorial-list">
-                {% assign sorted_tutorials = site.getting_started | sort: 'date' | reverse %}
-                {% for tutorial in sorted_tutorials limit: 3 %}
-                <div class="tutorial-card">
-                    <h3><a href="{{ tutorial.url | relative_url }}">{{ tutorial.title }}</a></h3>
-                    {% if tutorial.description %}
-                    <p>{{ tutorial.description }}</p>
-                    {% endif %}
-                    <div class="tutorial-meta">
-                        {% if tutorial.category %}
-                        <span class="category">{{ tutorial.category }}</span>
-                        {% endif %}
-                        {% if tutorial.difficulty %}
-                        <span class="difficulty">{{ tutorial.difficulty }}</span>
-                        {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="section-footer">
-                <a href="{{ '/getting-started/' | relative_url }}" class="btn btn-outline">모든 시작하기 보기</a>
-            </div>
-            -->
-        </div>
-    </section>
+    {% comment %}
+    최근 게시물: discourse.ktug.org(KTUG 마당, Q&A 마당, FAQ 마당)를 설치한 뒤
+    이 자리에 세 게시판의 최근 글을 보여 준다. CLAUDE.md의 'Discourse 포럼 연동' 참고.
+    {% endcomment %}
 </div>
 
 

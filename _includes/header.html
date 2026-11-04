@@ -3,7 +3,7 @@
         <div class="header-content">
             <a href="{{ '/' | relative_url }}" class="site-logo">
                 <img src="{{ '/assets/images/ktug-lion.png' | relative_url }}" alt="{{ site.title }}" class="site-logo-image">
-                <h1>{{ site.title }}</h1>
+                <span class="site-title">{% include with-tex-logo.html text=site.title %}</span>
             </a>
             
             <nav class="site-nav">
