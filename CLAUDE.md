@@ -40,6 +40,7 @@ _pages/              pages 컬렉션: about/, readings/, community/ (레이아�
 _getting_started/    getting_started 컬렉션 (레이아웃 tutorial)
 index.html, 404.html 홈과 404 페이지
 closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수정하지 않는다
+_design/logo/        로고 소스(TikZ, 사자 벡터화 스크립트, 원본 그림). `build.sh`가 assets/images/logo/에 웹용 이미지를 만든다
 ```
 
 ### 시작하기 튜토리얼
@@ -81,6 +82,8 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 사실 관계(KTUG/KTS 역사, 인명, 연도)는 사용자에게 확인을 받는다.
 
 ## 디자인
+
+- 로고: 글자는 TikZ(TeX Gyre Heros Bold, 머리글자 파랑 `#2354E5`, 흐린 그림자), 사자는 예전 홍석호 그림을 바탕으로 ChatGPT로 새로 그린 그림을 potrace로 벡터화했다. 고칠 때는 `_design/logo/ktug-logo.tex`를 수정하고 `_design/logo/build.sh`를 실행한다(공식 TeX Live 필요). favicon은 예전 것을 그대로 쓴다.
 
 - 디자인 방향은 아직 정하지 않았다. 큰 디자인 변경은 방향을 사용자와 먼저 합의한 다음 시작한다.
 - 색, 글꼴, 간격, breakpoint는 `_sass/_variables.scss`의 변수를 쓴다. 값을 하드코딩하지 않는다.
