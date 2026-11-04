@@ -8,6 +8,7 @@
 - 저장소: https://github.com/KoreanTUG/ktug-main-site
 - 현재 주소: https://koreantug.github.io/ktug-main-site/ (`baseurl: "/ktug-main-site"`)
 - GitHub Pages **legacy 빌드**를 쓴다. `main` 브랜치의 `/`를 빌드하며 Actions 워크플로는 없다. GitHub 쪽 빌드 환경은 `github-pages` gem(Jekyll 3.x)이다.
+- push 인증은 `gh auth setup-git`으로 설정한 GitHub CLI 자격 증명(https)을 쓴다.
 - **main에 push하면 즉시 공개된다.** 작업은 main에 직접 커밋하되, push는 사용자가 지시할 때만 한다.
 - 앞으로 **www.ktug.org로 이전할 예정**이다. 이전하면 `CNAME`을 추가하고 `url`/`baseurl`을 바꾼다. 그래서 내부 경로는 절대로 하드코딩하지 않는다(아래 링크 규칙 참고).
 
@@ -66,7 +67,8 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 참고 상자는 `> **참고** ...` 형식으로 쓴다.
 - 코드 블록에는 언어를 지정한다(`zsh`, `powershell`, `latex` 등).
 - `_config.yml`에서 `parse_block_html`을 켜 두었으므로 HTML 블록 안에서도 마크다운이 해석된다.
-- 수식은 MathJax로 렌더링한다. `$...$`가 인라인 수식으로 해석되므로 본문에 달러 기호를 쓸 때 주의한다.
+- 수식이 필요한 페이지는 front matter에 `math: true`를 넣는다. 그 페이지에서만 MathJax를 불러오고 `$...$`를 인라인 수식으로 해석한다.
+- 사이트 이름과 설명(`_config.yml`)은 일반 텍스트로 쓴다. `<title>`과 검색, 공유 미리보기에 그대로 나가기 때문이다. 화면에 TeX 로고가 필요하면 `{% include tex-logo.html %}`를 쓰고, 짧은 문구 안의 'TeX'을 로고로 바꾸려면 `{% include with-tex-logo.html text=... %}`를 쓴다.
 
 ### 콘텐츠 작성 분담
 
@@ -79,6 +81,8 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 디자인 방향은 아직 정하지 않았다. 큰 디자인 변경은 방향을 사용자와 먼저 합의한 다음 시작한다.
 - 색, 글꼴, 간격, breakpoint는 `_sass/_variables.scss`의 변수를 쓴다. 값을 하드코딩하지 않는다.
 - 모바일 메뉴는 768px(`$breakpoint-md`)을 기준으로 전환되고, `_includes/header.html`의 JS가 동작을 맡는다.
+- 400px(`$breakpoint-xs`) 이하의 아주 좁은 화면에서는 헤더 제목을 줄이고, 그래도 넘치면 말줄임표로 자른다.
+- 본문은 `word-break: keep-all`로 낱말 단위 줄바꿈을 한다.
 - 레이아웃이나 스타일을 바꾸면 데스크톱과 모바일 너비에서 모두 확인한다. 튜토리얼 페이지는 'PDF로 저장' 인쇄 결과도 확인한다.
 
 ## 커밋
@@ -86,7 +90,17 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 커밋 메시지는 한국어로 짧게 쓴다(예: `MacTeX 설치 문서 표기 수정`).
 - 작업 단위별로 커밋한다.
 
+## 계획: Discourse 포럼 연동
+
+- 별도 VPS에 Discourse를 설치하고 주소를 `discourse.ktug.org`로 한다. 게시판은 KTUG 마당, Q&A 마당, FAQ 마당 세 개다. 2026-11-04 기준 아직 설치하지 않았다.
+- 설치가 끝나면 커뮤니티 메뉴(`_data/navigation.yml`, `_pages/community/00-overview.md`)의 세 링크를 각 카테고리 주소로 바꾸고 https를 쓴다.
+- 메인 페이지(`index.html`) 하단의 '최근 게시물' 영역에 세 게시판의 최근 글을 보여 준다. 지금 이 영역은 제목만 있고 내용이 주석 처리되어 있다.
+- 이 사이트는 정적 사이트이고 legacy 빌드는 사용자 플러그인을 쓸 수 없다. 그래서 다음 두 방식 가운데 하나로 구현한다.
+  1. 브라우저에서 Discourse JSON(예: `/c/<slug>/<id>.json`, `/latest.json`)을 직접 불러온다. Discourse 쪽에서 CORS 허용 출처에 이 사이트 도메인을 넣어야 한다.
+  2. GitHub Actions가 주기적으로 글 목록을 받아 `_data/`에 저장하고 빌드한다. 배포 방식을 Actions로 바꿔야 한다.
+- 구현 방식과 API 세부 사항은 Discourse가 설치된 뒤 공식 문서와 실제 응답으로 확인하고 정한다.
+
 ## 알려진 문제
 
-- 커뮤니티 메뉴(`_data/navigation.yml`, `_pages/community/00-overview.md`, `index.html`)의 KTUG 마당, Q&A 마당, FAQ 마당이 모두 `http://discourse.ktug.org` 한 주소를 가리킨다. 2026-11-04 확인 시점에 이 주소는 http, https 모두 응답이 없었다.
+- 커뮤니티 메뉴의 세 링크가 모두 `http://discourse.ktug.org` 한 주소를 가리키고, 이 주소는 아직 응답하지 않는다(Discourse 설치 전이다. 위 계획 참고).
 - `README.md`에 내용이 거의 없다.
