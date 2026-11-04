@@ -2,10 +2,10 @@
     <div class="container">
         <div class="header-content">
             <a href="{{ '/' | relative_url }}" class="site-logo">
-                {%- comment -%}원본은 assets/images/ktug-lion.png(1344×768). 헤더에는 줄인 1배(60px)·2배(120px) 이미지를 쓴다{%- endcomment %}
+                {%- comment -%}로고 소스는 _design/logo/(TikZ). build.sh가 1배(60px)·2배(120px) 이미지를 만든다{%- endcomment %}
                 <picture>
-                    <source type="image/webp" srcset="{{ '/assets/images/ktug-lion-60.webp' | relative_url }} 1x, {{ '/assets/images/ktug-lion-120.webp' | relative_url }} 2x">
-                    <img src="{{ '/assets/images/ktug-lion-60.png' | relative_url }}" srcset="{{ '/assets/images/ktug-lion-120.png' | relative_url }} 2x" width="105" height="60" alt="{{ site.title }}" class="site-logo-image">
+                    <source type="image/webp" srcset="{{ '/assets/images/logo/ktug-logo-60.webp' | relative_url }} 1x, {{ '/assets/images/logo/ktug-logo-120.webp' | relative_url }} 2x">
+                    <img src="{{ '/assets/images/logo/ktug-logo-60.png' | relative_url }}" srcset="{{ '/assets/images/logo/ktug-logo-120.png' | relative_url }} 2x" width="105" height="60" alt="Korean TeX Users Group 로고" class="site-logo-image">
                 </picture>
                 <span class="site-title">{% include with-tex-logo.html text=site.title %}</span>
             </a>

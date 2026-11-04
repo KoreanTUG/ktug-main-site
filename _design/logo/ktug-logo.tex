@@ -1,0 +1,76 @@
+% KTUG 로고. LuaLaTeX으로 컴파일한다(build.sh 참고).
+% 변형은 \variant로 고른다: full(글자+사자), wordmark(글자만), lion(사자만)
+% 사자 그림: 예전 KTUG 로고의 사자(홍석호 그림)를 바탕으로 ChatGPT로 새로 그린
+% ktug-lion-new.png를 trace-lion.sh로 벡터화한 lion.pdf
+\providecommand\variant{full}
+% 조정값(컴파일할 때 \def로 덮어쓸 수 있다)
+\providecommand\letterspacing{10}  % 자간(fontspec LetterSpace)
+\providecommand\linesize{54}      % 줄 간격(pt)
+\providecommand\lionheight{88mm}  % 사자 높이
+\documentclass[tikz,border=4pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}[
+  UprightFont=*-Bold,
+  LetterSpace=\letterspacing,
+]
+\usepackage{xcolor}
+% 원본 로고 이미지에서 추출한 색
+\definecolor{ktugblue}{HTML}{2354E5}
+\definecolor{ktugink}{HTML}{1B1A1B}
+% 머리글자 색. 그림자를 그릴 때는 검정으로 바꾼다
+\colorlet{initialcolor}{ktugblue}
+
+% 원본처럼 머리글자를 나머지보다 크게(약 1.33배)
+\newcommand\initial[1]{{\fontsize{53}{\linesize}\selectfont\textcolor{initialcolor}{#1}}}
+% 산세리프 굵은 글꼴에 맞춘 TeX 로고. 머리글자 T만 파란색
+\newcommand\logoTeX{%
+  \initial{T}\kern-.06em\raisebox{-.22em}{E}\kern-.08em X}
+
+\newcommand\wordmarktext{%
+  \initial{K}orean\\
+  \logoTeX\\
+  \initial{U}sers\\
+  \initial{G}roup}
+
+% 그림자: 원본처럼 오른쪽 아래로 흐리게 퍼진다.
+% TikZ에는 흐림 효과가 없어서, 투명도가 낮은 검은 글자를 원 모양으로 조금씩
+% 어긋나게 겹쳐(가운데 1장 + 반지름별 8·12·16장) 흐림을 흉내 낸다.
+\newcommand\shadowdx{4pt}
+\newcommand\shadowdy{-6pt}
+\newcommand\shadowopacity{0.028}
+\newcommand\shadowcopy[2]{% #1, #2: 그림자 중심에서 어긋난 거리
+  \node[anchor=north west, align=left, inner sep=0pt,
+        font=\fontsize{40}{\linesize}\selectfont, text=black, text opacity=\shadowopacity]
+    at ([shift={(#1,#2)}]\shadowdx,\shadowdy) {\colorlet{initialcolor}{black}\wordmarktext};}
+
+\newcommand\wordmark{%
+  \begin{tikzpicture}[baseline]
+    \shadowcopy{0pt}{0pt}
+    \foreach \r/\n in {2pt/8, 4pt/12, 6pt/16} {
+      \foreach \i in {1,...,\n} {
+        \shadowcopy{{\r*cos(360*\i/\n)}}{{\r*sin(360*\i/\n)}}
+      }
+    }
+    \node[anchor=north west, align=left, inner sep=0pt,
+          font=\fontsize{40}{\linesize}\selectfont, text=ktugink] at (0,0) {\wordmarktext};
+  \end{tikzpicture}}
+
+\newcommand\lion[1]{\includegraphics[height=#1]{lion.pdf}}
+
+\def\variantWordmark{wordmark}
+\def\variantLion{lion}
+
+\begin{document}
+\ifx\variant\variantWordmark
+  \wordmark
+\else\ifx\variant\variantLion
+  \lion{\lionheight}
+\else
+  \begin{tikzpicture}
+    \node[anchor=south west, inner sep=0pt] (w) at (0,0) {\wordmark};
+    % 사자는 글자 묶음보다 약간 크게, 아래쪽을 맞춘다
+    \node[anchor=south west, inner sep=0pt] at ([xshift=4mm]w.south east)
+      {\lion{\lionheight}};
+  \end{tikzpicture}
+\fi\fi
+\end{document}
