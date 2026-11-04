@@ -37,6 +37,8 @@ exclude:
   - .gitignore
   - README.md
   - closet/
+  - scripts/
+  - CLAUDE.md
 
 # Plugins (GitHub Pages supported plugins)
 plugins:

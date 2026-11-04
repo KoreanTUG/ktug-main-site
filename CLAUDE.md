@@ -20,7 +20,8 @@
   최신 `ruby`(4.x)는 Jekyll 3.9와 맞지 않을 수 있어 쓰지 않는다.
 - gem은 `vendor/bundle`에 설치한다(`bundle config set --local path vendor/bundle`, git에서 제외됨).
 - 미리보기: `bundle exec jekyll serve` → http://localhost:4000/ktug-main-site/
-- 빌드 검증: `bundle exec jekyll build`. 커밋 전에 경고나 오류가 없는지 확인한다.
+- 빌드 검증: `bundle exec jekyll build && python3 scripts/check-links.py`. 커밋 전에 빌드 경고와 오류가 없고, 링크 검사 결과가 0건인지 확인한다. 링크 검사는 baseurl이 빠진 내부 링크와 대상이 없는 링크를 찾는다.
+- 저장소에만 두고 사이트에 공개하지 않을 파일(`CLAUDE.md`, `scripts/` 등)은 `_config.yml`의 `exclude`에 넣는다. front matter가 없는 파일도 Jekyll이 그대로 복사해 공개하기 때문이다.
 - 사용 플러그인: jekyll-feed, jekyll-sitemap, jekyll-seo-tag. GitHub Pages가 허용하는 플러그인만 쓸 수 있다.
 
 ## 구조
