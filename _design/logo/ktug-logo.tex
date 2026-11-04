@@ -1,5 +1,6 @@
 % KTUG 로고. LuaLaTeX으로 컴파일한다(build.sh 참고).
-% 변형은 \variant로 고른다: full(글자+사자), wordmark(글자만), lion(사자만)
+% 변형은 \variant로 고른다: full(글자+사자), wordmark(글자만), lion(사자만),
+%   banner(full 오른쪽에 사이트 이름. Discourse 헤더 로고용)
 % 사자 그림: 예전 KTUG 로고의 사자(홍석호 그림)를 바탕으로 ChatGPT로 새로 그린
 % ktug-lion-new.png를 trace-lion.sh로 벡터화한 lion.pdf
 \providecommand\variant{full}
@@ -59,18 +60,38 @@
 
 \def\variantWordmark{wordmark}
 \def\variantLion{lion}
+\def\variantBanner{banner}
 
-\begin{document}
-\ifx\variant\variantWordmark
-  \wordmark
-\else\ifx\variant\variantLion
-  \lion{\lionheight}
-\else
+% banner의 사이트 이름: KTUG 사이트 헤더와 같은 모양(굵은 고딕, 남색 #2c3e50, TeX 로고)
+% 글꼴은 시스템의 Noto Sans CJK KR Bold(TeX Live에는 없다. fonts-noto-cjk 패키지)
+\newfontfamily\sitetitlefont{Noto Sans CJK KR}[UprightFont=* Bold, LetterSpace=0]
+\definecolor{ktugnavy}{HTML}{2C3E50}
+\newcommand\sitetitleTeX{T\kern-.1667em\raisebox{-.5ex}{E}\kern-.125em X}
+\newcommand\fulllogo{%
   \begin{tikzpicture}
     \node[anchor=south west, inner sep=0pt] (w) at (0,0) {\wordmark};
     % 사자는 글자 묶음보다 약간 크게, 아래쪽을 맞춘다
     \node[anchor=south west, inner sep=0pt] at ([xshift=4mm]w.south east)
       {\lion{\lionheight}};
+  \end{tikzpicture}}
+
+\begin{document}
+\ifx\variant\variantWordmark
+  \wordmark
+\else\ifx\variant\variantLion
+  % standalone의 tikz 옵션은 tikzpicture만 잘라 내므로 그림도 tikzpicture에 넣는다
+  \begin{tikzpicture}\node[inner sep=0pt]{\lion{\lionheight}};\end{tikzpicture}
+\else\ifx\variant\variantBanner
+  % 사이트 헤더 비율: 로고 높이 60px에 제목 글자 24px(0.4배), 간격 12px(0.2배)
+  \newdimen\logoh
+  \begin{tikzpicture}
+    \node[anchor=west, inner sep=0pt] (logo) at (0,0) {\fulllogo};
+    \pgfextracty{\logoh}{\pgfpointdiff{\pgfpointanchor{logo}{south}}{\pgfpointanchor{logo}{north}}}
+    \node[anchor=west, inner sep=0pt, text=ktugnavy,
+          font={\sitetitlefont\fontsize{\dimexpr\logoh*2/5\relax}{\dimexpr\logoh/2\relax}\selectfont}]
+      at ([xshift=\logoh/5]logo.east) {한글 \sitetitleTeX\ 사용자 모임};
   \end{tikzpicture}
-\fi\fi
+\else
+  \fulllogo
+\fi\fi\fi
 \end{document}

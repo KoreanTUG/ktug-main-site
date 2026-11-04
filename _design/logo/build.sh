@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 [ -f lion.pdf ] || ./trace-lion.sh
 mkdir -p out
-for v in full wordmark lion; do
+for v in full wordmark lion banner; do
   lualatex -interaction=nonstopmode -halt-on-error -jobname="ktug-logo-$v" \
     "\def\variant{$v}\input{ktug-logo}" >/dev/null
   # pdftocairo는 글꼴을 경로로 바꾸므로 SVG 하나로 완결된다
@@ -27,3 +27,16 @@ for h in 60 120 480; do
   magick "$WEB/ktug-logo-$h.png" -strip -define png:compression-level=9 "$WEB/ktug-logo-$h.png"
 done
 ls -la "$WEB"
+
+# Discourse 브랜딩용(관리자 → 브랜딩에 올린다). out/discourse/에 만든다
+#   logo:       가로 로고(로고 + 사이트 이름), 높이 240px(2배 해상도)
+#   logo_small: 정사각형 사자, 240×240px, 투명 바탕
+DISC=out/discourse
+mkdir -p "$DISC"
+pdftocairo -png -singlefile -transp -scale-to-y 240 -scale-to-x -1 \
+  out/ktug-logo-banner.pdf "$DISC/ktug-logo"
+pdftocairo -png -singlefile -transp -scale-to-y 224 -scale-to-x -1 \
+  out/ktug-logo-lion.pdf "$DISC/lion-tmp"
+magick "$DISC/lion-tmp.png" -background none -gravity center -extent 240x240 -strip "$DISC/ktug-logo-small.png"
+rm -f "$DISC/lion-tmp.png"
+ls -la "$DISC"
