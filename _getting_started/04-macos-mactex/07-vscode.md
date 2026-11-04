@@ -11,7 +11,7 @@ next_tutorial: /getting-started/macos-mactex/lshort/
 
 LaTeX을 본격적으로 쓰게 되면 대부분의 시간을 에디터와 함께 보내게 됩니다. 에디터가 얼마나 편리하고 손에 맞느냐에 따라 작업 생산성에 극명한 차이가 나기 때문에 자신에게 적합한 에디터를 발견하고 길들이는 것은 대단히 중요한 일입니다.
 
-MacTeX가 기본 제공하는 [TeXShop](https://pages.uoregon.edu/koch/texshop)은 훌륭한 에디터이고 [TeX Studio](https://www.texstudio.org)라든가 [Texmaker](https://www.xm1math.net/texmaker/) 같은 LaTeX 전용 에디터가 있으나, 이 안내서는 [Visual Studio Code](https://code.visualstudio.com)라는 범용 에디터를 LaTeX 에디터로 사용하는 상황을 가정하였습니다. 이 에디터는 다른 전용 에디터와 달리 LaTeX 사용 상황에 알맞게 약간의 설정 작업을 해주어야 합니다. 이 일은 조금 귀찮지만 충분히 시도해볼 가치가 있습니다.
+MacTeX이 기본 제공하는 [TeXShop](https://pages.uoregon.edu/koch/texshop)은 훌륭한 에디터이고 [TeX Studio](https://www.texstudio.org)라든가 [Texmaker](https://www.xm1math.net/texmaker/) 같은 LaTeX 전용 에디터가 있으나, 이 안내서는 [Visual Studio Code](https://code.visualstudio.com)라는 범용 에디터를 LaTeX 에디터로 사용하는 상황을 가정하였습니다. 이 에디터는 다른 전용 에디터와 달리 LaTeX 사용 상황에 알맞게 약간의 설정 작업을 해주어야 합니다. 이 일은 조금 귀찮지만 충분히 시도해볼 가치가 있습니다.
 
 > **참고** 만약 TeXShop이나 TeX Studio로 만족한다면 이 장은 건너뛰어도 좋습니다.
 

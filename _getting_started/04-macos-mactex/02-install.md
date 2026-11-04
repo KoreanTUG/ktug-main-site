@@ -1,13 +1,13 @@
 ---
 title: MacTeX 설치
 layout: tutorial
-description: MacTeX를 설치합니다.
+description: MacTeX을 설치합니다.
 permalink: /getting-started/macos-mactex/install/
 prev_tutorial: /getting-started/macos-mactex/prep/
 next_tutorial: /getting-started/macos-mactex/texshop/
 ---
 
-이제 MacTeX를 설치하고 설정하는 방법을 알아봅니다.
+이제 MacTeX을 설치하고 설정하는 방법을 알아봅니다.
 
 ## MacTeX 설치 프로그램 내려받아 실행하기
 
@@ -107,7 +107,7 @@ macOS에는 Python이 기본 설치되어 있어 MacTeX만을 위해서 별도�
 sudo ln -s `which python3` /usr/local/bin/python
 ```
 
-> **참고** 이 안내서는 한국어 문서 작성을 주로 하는 상황을 가정하고 있습니다. 만약 TeX을 설치하는 목적이 영어 논문을 쓰기 위해서라면 MacTeX를 설치한 후 그 상태에서 바로 작업을 시작하면 됩니다. 그 경우에 이 안내서는 여기가 끝입니다. 이후 설명하는 폰트 문제라든가 KTUG 사설저장소 패키지 등은 모두 한국어/한글 문서 작성과 관련있는 것입니다.
+> **참고** 이 안내서는 한국어 문서 작성을 주로 하는 상황을 가정하고 있습니다. 만약 TeX을 설치하는 목적이 영어 논문을 쓰기 위해서라면 MacTeX을 설치한 후 그 상태에서 바로 작업을 시작하면 됩니다. 그 경우에 이 안내서는 여기가 끝입니다. 이후 설명하는 폰트 문제라든가 KTUG 사설저장소 패키지 등은 모두 한국어/한글 문서 작성과 관련있는 것입니다.
 
 ## 다음 단계
 
