@@ -40,10 +40,31 @@ description: 한글텍사용자모임에 오신 것을 환영합니다
         </div>
     </section>
     
-    {% comment %}
-    최근 게시물: discourse.ktug.org(KTUG 마당, Q&A 마당, FAQ 마당)를 설치한 뒤
-    이 자리에 세 게시판의 최근 글을 보여 준다. CLAUDE.md의 'Discourse 포럼 연동' 참고.
-    {% endcomment %}
+    {%- comment -%}
+    최근 게시물: Discourse(KTUG 마당, Q&A 마당, FAQ 마당)의 최근 글을 브라우저에서 불러온다.
+    site.discourse.url이 비어 있으면 이 영역을 만들지 않는다(_config.yml 참고).
+    Discourse 쪽 CORS 허용 출처에 이 사이트 주소가 있어야 한다.
+    {%- endcomment -%}
+    {% if site.discourse.url and site.discourse.url != "" %}
+    {%- assign forum = site.discourse.url | remove_last: "/" -%}
+    <section class="recent-posts" data-discourse-url="{{ forum }}" data-topics-per-category="{{ site.discourse.topics_per_category | default: 5 }}">
+        <div class="container">
+            <h2>최근 게시물</h2>
+            <div class="recent-posts-grid">
+                {% for category in site.discourse.categories %}
+                <div class="recent-posts-column" data-category-slug="{{ category.slug }}" data-category-id="{{ category.id }}">
+                    <h3><a href="{{ forum }}/c/{{ category.slug }}/{{ category.id }}">{{ category.name }}</a></h3>
+                    <ul class="recent-posts-list" aria-live="polite">
+                        <li class="recent-posts-status">불러오는 중…</li>
+                    </ul>
+                    <a class="recent-posts-more" href="{{ forum }}/c/{{ category.slug }}/{{ category.id }}">{{ category.name }} 전체 보기 →</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <script src="{{ '/assets/js/recent-posts.js' | relative_url }}" defer></script>
+    {% endif %}
 </div>
 
 

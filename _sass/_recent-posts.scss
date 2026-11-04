@@ -1,0 +1,82 @@
+// 메인 화면 '최근 게시물'(Discourse). 마크업은 index.html, 스크립트는 assets/js/recent-posts.js
+.recent-posts {
+    padding: 4rem 0 0;
+}
+
+.recent-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.recent-posts-column {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $bg-color;
+    
+    h3 {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid $primary-color;
+        font-size: 1.25rem;
+        
+        a {
+            color: $secondary-color;
+            
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.recent-posts-list {
+    flex: 1;
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.recent-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin: 0;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid $border-color;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.recent-post-title {
+    color: $text-color;
+    font-weight: 500;
+    line-height: 1.4;
+    
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.recent-post-meta {
+    font-size: 0.85rem;
+    color: $text-light;
+}
+
+.recent-posts-status {
+    margin: 0;
+    padding: 0.6rem 0;
+    color: $text-light;
+}
+
+.recent-posts-more {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
