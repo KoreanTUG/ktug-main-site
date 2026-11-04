@@ -79,9 +79,12 @@ discourse:
     - name: KTUG 마당
       slug: ktug
       id: 5
+      icon: megaphone          # _includes/icons/<icon>.svg
     - name: Q&A 마당
       slug: qna
       id: 6
+      icon: message-circle-question-mark
     - name: FAQ 마당
       slug: faq
       id: 7
+      icon: list-checks

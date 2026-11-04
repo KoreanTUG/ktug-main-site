@@ -53,7 +53,7 @@ description: 한글텍사용자모임에 오신 것을 환영합니다
             <div class="recent-posts-grid">
                 {% for category in site.discourse.categories %}
                 <div class="recent-posts-column" data-category-slug="{{ category.slug }}" data-category-id="{{ category.id }}">
-                    <h3><a href="{{ forum }}/c/{{ category.slug }}/{{ category.id }}">{{ category.name }}</a></h3>
+                    <h3>{% if category.icon %}<span class="feature-icon">{% include icons/{{ category.icon }}.svg %}</span>{% endif %}<a href="{{ forum }}/c/{{ category.slug }}/{{ category.id }}">{{ category.name }}</a></h3>
                     <ul class="recent-posts-list" aria-live="polite">
                         <li class="recent-posts-status">불러오는 중…</li>
                     </ul>

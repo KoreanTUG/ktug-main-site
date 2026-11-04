@@ -54,12 +54,26 @@
     margin-top: 2rem;
 }
 
-.feature-card {
-    position: relative;
+// 카드 바탕: 주요 서비스 카드와 최근 게시물 카드가 함께 쓴다
+%card-surface {
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+// 카드 제목: 아이콘(.feature-icon)과 파란 제목
+%card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+}
+
+.feature-card {
+    @extend %card-surface;
+    position: relative;
     transition: transform $transition-base, box-shadow $transition-base;
     
     &:hover {
@@ -68,11 +82,7 @@
     }
     
     h3 {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        margin-bottom: 1rem;
-        color: $primary-color;
+        @extend %card-title;
     }
     
     p {
