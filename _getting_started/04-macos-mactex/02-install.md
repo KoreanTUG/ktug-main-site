@@ -24,7 +24,7 @@ open MacTeX.pkg
 
 ## 설치 프로그램 실행
 
-`MacTeX.pkg`를 실행하면 다음과 같이 "Introddction" 화면이 표시됩니다.
+`MacTeX.pkg`를 실행하면 다음과 같이 "Introduction" 화면이 표시됩니다.
 
 <img src="{{ '/assets/images/macos-mactex/mactex-inst-00.png' | relative_url }}" alt="MacTeX 설치 프로그램 Introduction 화면">
 
