@@ -87,6 +87,7 @@ _design/logo/        로고 소스(TikZ, 사자 벡터화 스크립트, 원본 �
 
 - 디자인 방향은 아직 정하지 않았다. 큰 디자인 변경은 방향을 사용자와 먼저 합의한 다음 시작한다.
 - 색, 글꼴, 간격, breakpoint는 `_sass/_variables.scss`의 변수를 쓴다. 값을 하드코딩하지 않는다.
+- 아이콘은 `_includes/icons/`의 SVG include를 쓴다(Lucide: ISC, GitHub Octicons: MIT, 라이선스 원문을 같은 폴더에 둔다). 이모지는 운영체제마다 모양이 달라 아이콘으로 쓰지 않는다.
 - 모바일 메뉴는 768px(`$breakpoint-md`)을 기준으로 전환되고, `_includes/header.html`의 JS가 동작을 맡는다.
 - 400px(`$breakpoint-xs`) 이하의 아주 좁은 화면에서는 헤더 제목을 줄이고, 그래도 넘치면 말줄임표로 자른다.
 - 본문은 `word-break: keep-all`로 낱말 단위 줄바꿈을 한다.
@@ -111,3 +112,4 @@ _design/logo/        로고 소스(TikZ, 사자 벡터화 스크립트, 원본 �
 
 - 커뮤니티 메뉴의 세 링크가 모두 `http://discourse.ktug.org` 한 주소를 가리키고, 이 주소는 아직 응답하지 않는다(Discourse 설치 전이다. 위 계획 참고).
 - `README.md`에 내용이 거의 없다.
+- 푸터의 저작권 문구("All rights reserved.")는 임시다. 콘텐츠 라이선스는 KTUG/KTS가 정한 뒤 고친다(`_includes/footer.html`).

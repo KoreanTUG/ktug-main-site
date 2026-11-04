@@ -17,9 +17,19 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+            {%- comment -%}
+              연도: 빌드 시점의 연도를 넣어 두고, 브라우저에서 현재 연도로 바꾼다.
+              사이트는 push할 때만 다시 빌드되므로 빌드 연도만 쓰면 해가 바뀌어도 그대로 남는다.
+              라이선스 문구는 KTUG/KTS가 정한 뒤 고친다.
+            {%- endcomment %}
+            <p>&copy; <span class="current-year">{{ 'now' | date: '%Y' }}</span> {{ site.title }}. All rights reserved.</p>
         </div>
     </div>
 </footer>
+<script>
+document.querySelectorAll('.current-year').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+});
+</script>
 
 
