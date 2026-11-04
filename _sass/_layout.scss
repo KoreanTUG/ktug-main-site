@@ -28,6 +28,11 @@
         gap: 0.5rem;
     }
     
+    picture {
+        display: block;
+        flex-shrink: 0;
+    }
+    
     .site-logo-image {
         height: 3.75rem;
         width: auto;
