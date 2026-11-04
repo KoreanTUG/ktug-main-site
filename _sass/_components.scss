@@ -11,15 +11,22 @@
 }
 
 .hero-title {
-    // 소개 문구가 제목이므로 이름보다 길다: 너무 크지 않게, 두 줄까지 자연스럽게
-    max-width: 24em;
-    margin: 0 auto 2rem;
-    font-size: 2.25rem;
-    line-height: 1.4;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     color: white;
     
     @media (max-width: $breakpoint-md) {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    
+    @media (max-width: $breakpoint-md) {
+        font-size: 1rem;
     }
 }
 

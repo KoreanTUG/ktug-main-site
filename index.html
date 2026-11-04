@@ -6,8 +6,8 @@ description: 한글텍사용자모임에 오신 것을 환영합니다
 <div class="home">
     <section class="hero">
         <div class="container">
-            {%- comment -%}사이트 이름은 헤더에 있으므로, 메인 화면 제목은 소개 문구로 쓴다{%- endcomment %}
-            <h1 class="hero-title">{% include with-tex-logo.html text=site.description %}</h1>
+            <h1 class="hero-title">{% include with-tex-logo.html text=site.title %}</h1>
+            <p class="hero-description">{% include with-tex-logo.html text=site.description %}</p>
             <div class="hero-actions">
                 <a href="{{ '/about/tex-latex/' | relative_url }}" class="btn btn-primary">TeX과 LaTeX</a>
                 <a href="{{ '/getting-started/' | relative_url }}" class="btn btn-secondary">시작하기</a>
