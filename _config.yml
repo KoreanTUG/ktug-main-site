@@ -71,9 +71,9 @@ defaults:
 # Discourse 포럼(최근 게시물). url이 비어 있으면 메인 화면의 '최근 게시물' 영역을 만들지 않는다.
 # 로컬 시험 주소는 _config_dev.yml(git 제외)에 둔다:
 #   bundle exec jekyll serve --host localhost --config _config.yml,_config_dev.yml
-# VPS 설치 뒤에는 url을 https://discourse.ktug.org로 채운다. 게시판 id는 Discourse의 /c/<slug>/<id> 주소에서 확인한다.
+# 게시판 id는 Discourse의 /c/<slug>/<id> 주소에서 확인한다.
 discourse:
-  url: ""
+  url: "https://discourse.ktug.org"
   topics_per_category: 5
   categories:
     - name: KTUG 마당

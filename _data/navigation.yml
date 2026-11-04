@@ -26,10 +26,10 @@
   link: /community/
   submenu:
     - name: KTUG 마당
-      link: http://discourse.ktug.org
+      link: https://discourse.ktug.org/c/ktug/5
     - name: Q&A 마당
-      link: http://discourse.ktug.org
+      link: https://discourse.ktug.org/c/qna/6
     - name: FAQ 마당
-      link: http://discourse.ktug.org
+      link: https://discourse.ktug.org/c/faq/7
     - name: GitHub Organization
       link: https://github.com/KoreanTUG
