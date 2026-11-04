@@ -20,5 +20,5 @@ KTS는 다양한 학계, 산업계 및 연구기관 종사자들이 TeX과 관�
 
 ## 참고
 
-- [KTS 창립 취지문](/about/kts-founding/)
-- [KTUG 및 KTS 연혁](/about/ktug-kts-hist)
+- <a href="{{ '/about/kts-founding/' | relative_url }}">KTS 창립 취지문</a>
+- <a href="{{ '/about/ktug-kts-hist/' | relative_url }}">KTUG 및 KTS 연혁</a>
