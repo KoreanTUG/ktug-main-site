@@ -14,7 +14,10 @@
 ## 로컬 개발
 
 - Gemfile은 Jekyll 3.9를 쓴다(github-pages gem은 버전 충돌 때문에 주석 처리했다). Ruby 3.4+를 위해 base64, logger, bigdecimal을 추가해 두었다.
-- 이 Linux 머신에는 아직 Ruby/Bundler가 없다. 로컬에 설치해서 쓰기로 했다.
+- Ruby는 Homebrew(Linuxbrew)의 `ruby@3.3`을 쓴다. keg-only라서 PATH에 직접 넣어야 한다:
+  `export PATH="/home/linuxbrew/.linuxbrew/opt/ruby@3.3/bin:$PATH"`
+  최신 `ruby`(4.x)는 Jekyll 3.9와 맞지 않을 수 있어 쓰지 않는다.
+- gem은 `vendor/bundle`에 설치한다(`bundle config set --local path vendor/bundle`, git에서 제외됨).
 - 미리보기: `bundle exec jekyll serve` → http://localhost:4000/ktug-main-site/
 - 빌드 검증: `bundle exec jekyll build`. 커밋 전에 경고나 오류가 없는지 확인한다.
 - 사용 플러그인: jekyll-feed, jekyll-sitemap, jekyll-seo-tag. GitHub Pages가 허용하는 플러그인만 쓸 수 있다.
@@ -83,10 +86,7 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 커밋 메시지는 한국어로 짧게 쓴다(예: `MacTeX 설치 문서 표기 수정`).
 - 작업 단위별로 커밋한다.
 
-## 알려진 문제 (2026-11 점검)
+## 알려진 문제
 
-- `_pages/readings/00-overview.md`: `latex4wp-ko.pdff` 링크가 오타라서 깨져 있다(`.pdf`가 맞다).
-- `_includes/header.html`: `active` 클래스 판정에 예전 URL(`/tex-latex/`, `/ktug/`, `/tex-start/` 등)이 하드코딩되어 있다. 하위 페이지에 있을 때 상위 메뉴가 강조되지 않는다.
-- `_data/navigation.yml`, `index.html`: 커뮤니티 링크가 `http://discourse.ktug.org`(http)이다. KTUG 마당, Q&A 마당, FAQ 마당이 모두 같은 주소를 가리킨다.
-- `_layouts/default.html`: favicon 관련 주석 블록이 남아 있다.
+- 커뮤니티 메뉴(`_data/navigation.yml`, `_pages/community/00-overview.md`, `index.html`)의 KTUG 마당, Q&A 마당, FAQ 마당이 모두 `http://discourse.ktug.org` 한 주소를 가리킨다. 2026-11-04 확인 시점에 이 주소는 http, https 모두 응답이 없었다.
 - `README.md`에 내용이 거의 없다.
