@@ -16,12 +16,20 @@
                 <ul class="nav-menu">
                     {% for item in site.data.navigation %}
                     {% assign item_is_external = false %}
+                    {% comment %}현재 페이지가 이 메뉴 경로 아래에 있으면 활성 표시 (홈은 정확히 일치할 때만){% endcomment %}
+                    {% assign item_active = false %}
+                    {% assign url_prefix = page.url | slice: 0, item.link.size %}
+                    {% if item.link == '/' %}
+                        {% if page.url == '/' or page.url == '/index.html' %}{% assign item_active = true %}{% endif %}
+                    {% elsif url_prefix == item.link %}
+                        {% assign item_active = true %}
+                    {% endif %}
                     {% if item.link contains 'http://' or item.link contains 'https://' %}
                         {% assign item_is_external = true %}
                     {% endif %}
                     <li class="{% if item.submenu %}has-submenu{% endif %}">
                         <a href="{% if item_is_external %}{{ item.link }}{% else %}{{ item.link | relative_url }}{% endif %}" 
-                           {% if page.url == item.link or page.url == '/tex-latex/' or page.url == '/ktug/' or page.url == '/kts/' or page.url == '/tex-start/' or page.url == '/tex-install/' or page.url == '/tex-usage/' %}class="active"{% endif %}
+                           {% if item_active %}class="active"{% endif %}
                            {% if item_is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                             {{ item.name }}
                             {% if item.submenu %}<span class="submenu-toggle">▼</span>{% endif %}
@@ -35,7 +43,7 @@
                             {% endif %}
                             <li>
                                 <a href="{% if is_external %}{{ subitem.link }}{% else %}{{ subitem.link | relative_url }}{% endif %}"
-                                   {% if page.url == subitem.link %}class="active"{% endif %}
+                                   {% assign sub_prefix = page.url | slice: 0, subitem.link.size %}{% if is_external == false and sub_prefix == subitem.link %}class="active"{% endif %}
                                    {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                                     {{ subitem.name }}
                                 </a>
