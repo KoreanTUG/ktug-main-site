@@ -87,23 +87,21 @@ time {
 }
 
 .tutorial-pdf-button {
-    padding: 0.5rem 1rem;
-    background-color: $primary-color;
-    color: white;
-    border: none;
+    flex-shrink: 0;
+    padding: 0.3rem 0.75rem;
+    background-color: transparent;
+    color: $primary-color;
+    border: 1px solid $primary-color;
     border-radius: 5px;
     cursor: pointer;
+    font-family: inherit;
     font-size: 0.85rem;
-    transition: background-color $transition-base, transform $transition-base;
-    margin-left: auto;
+    white-space: nowrap;
+    transition: background-color $transition-base, color $transition-base;
     
     &:hover {
-        background-color: darken($primary-color, 10%);
-        transform: translateY(-1px);
-    }
-    
-    &:active {
-        transform: translateY(0);
+        background-color: $primary-color;
+        color: white;
     }
 }
 
@@ -139,6 +137,131 @@ time {
 .tutorial {
     max-width: 900px;
     margin: 0 auto;
+    
+    @media (max-width: $breakpoint-xl) {
+        padding: 0 $container-padding;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        padding: 0 1rem;
+    }
+    
+    // 차례가 있는 안내서: 넓은 화면에서는 왼쪽에 차례를 고정한다
+    &.has-toc {
+        @media (min-width: $breakpoint-lg) {
+            max-width: 900px + $toc-width + 48px;
+            display: grid;
+            grid-template-columns: $toc-width minmax(0, 1fr);
+            gap: 3rem;
+            align-items: start;
+        }
+    }
+}
+
+.tutorial-main {
+    min-width: 0;
+}
+
+// 안내서 차례 (넓은 화면)
+.tutorial-toc {
+    display: none;
+    
+    @media (min-width: $breakpoint-lg) {
+        display: block;
+        position: sticky;
+        top: $header-offset;
+        max-height: calc(100vh - #{$header-offset} - 1rem);
+        overflow-y: auto;
+        font-size: 0.9rem;
+    }
+}
+
+.tutorial-toc-title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    
+    a {
+        color: $secondary-color;
+    }
+}
+
+.tutorial-toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: chapter -1;
+    border-left: 2px solid $border-color;
+    
+    li {
+        counter-increment: chapter;
+        margin: 0;
+    }
+    
+    a {
+        display: flex;
+        padding: 0.35rem 0.75rem;
+        margin-left: -2px;
+        border-left: 2px solid transparent;
+        color: $text-light;
+        line-height: 1.4;
+        
+        &:hover {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+    
+    // 개요(첫 항목)를 빼고 장 번호를 붙인다
+    li + li a::before {
+        content: counter(chapter) ".";
+        flex-shrink: 0;
+        min-width: 1.6em;
+        margin-right: 0.25rem;
+        color: $text-light;
+        font-weight: 400;
+    }
+    
+    li.current a {
+        color: $primary-color;
+        font-weight: 600;
+        border-left-color: $primary-color;
+    }
+}
+
+// 안내서 차례 (좁은 화면: 접기)
+.tutorial-toc-mobile {
+    margin-top: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    
+    @media (min-width: $breakpoint-lg) {
+        display: none;
+    }
+    
+    summary {
+        cursor: pointer;
+        padding: 0.6rem 1rem;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+    
+    .tutorial-toc-list {
+        margin: 0 1rem 0.75rem;
+    }
+}
+
+// 빵부스러기와 PDF 버튼 줄
+.tutorial-toolbar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    
+    .breadcrumb {
+        margin-bottom: 0;
+    }
 }
 
 .tutorial-header {
@@ -307,12 +430,16 @@ time {
 .tutorial-navigation {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid $border-color;
 }
 
 .tutorial-nav-link {
+    display: flex;
+    flex-direction: column;
+    max-width: 48%;
     padding: 0.75rem 1.5rem;
     background-color: $bg-light;
     border-radius: 5px;
@@ -324,8 +451,18 @@ time {
     }
 }
 
+.tutorial-nav-label {
+    font-size: 0.85rem;
+    color: $text-light;
+}
+
+.tutorial-nav-title {
+    font-weight: 600;
+}
+
 .tutorial-nav-next {
     margin-left: auto;
+    text-align: right;
 }
 
 

@@ -55,6 +55,7 @@
 }
 
 .feature-card {
+    position: relative;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -81,6 +82,26 @@
     color: $primary-color;
     font-weight: 500;
     display: inline-block;
+    
+    // 카드 전체를 링크 영역으로 넓힌다
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 8px;
+    }
+    
+    &:focus-visible {
+        outline: none;
+        
+        &::after {
+            outline: 2px solid $primary-color;
+            outline-offset: 2px;
+        }
+    }
     
     &:hover {
         text-decoration: none;
@@ -110,6 +131,14 @@ section {
 .page {
     max-width: 900px;
     margin: 0 auto;
+    
+    @media (max-width: $breakpoint-xl) {
+        padding: 0 $container-padding;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        padding: 0 1rem;
+    }
 }
 
 .page-header {

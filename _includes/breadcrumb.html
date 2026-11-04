@@ -1,0 +1,31 @@
+{%- comment -%}
+  현재 페이지 URL의 각 단계를 따라 빵부스러기를 만든다.
+  단계 이름은 _data/navigation.yml의 메뉴 이름을 먼저 쓰고, 없으면 그 URL 문서의 title을 쓴다.
+  둘 다 없는 단계는 건너뛴다.
+{%- endcomment -%}
+{%- assign crumb_parts = page.url | split: '/' -%}
+{%- assign crumb_path = '/' -%}
+<nav class="breadcrumb" aria-label="현재 위치">
+    <a href="{{ '/' | relative_url }}">홈</a>
+    {%- for part in crumb_parts -%}
+        {%- if part == '' or forloop.last -%}{%- continue -%}{%- endif -%}
+        {%- assign crumb_path = crumb_path | append: part | append: '/' -%}
+        {%- assign crumb_name = nil -%}
+        {%- for item in site.data.navigation -%}
+            {%- if item.link == crumb_path -%}{%- assign crumb_name = item.name -%}{%- endif -%}
+            {%- for sub in item.submenu -%}
+                {%- if sub.link == crumb_path -%}{%- assign crumb_name = sub.name -%}{%- endif -%}
+            {%- endfor -%}
+        {%- endfor -%}
+        {%- unless crumb_name -%}
+            {%- assign crumb_doc = site.documents | where: 'url', crumb_path | first -%}
+            {%- if crumb_doc -%}{%- assign crumb_name = crumb_doc.title -%}{%- endif -%}
+        {%- endunless -%}
+        {%- if crumb_name %}
+    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+    <a href="{{ crumb_path | relative_url }}">{{ crumb_name }}</a>
+        {%- endif -%}
+    {%- endfor %}
+    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+    <span aria-current="page">{{ page.title }}</span>
+</nav>
