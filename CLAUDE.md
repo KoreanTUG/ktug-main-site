@@ -29,7 +29,7 @@
 _config.yml          사이트 설정, 컬렉션, 기본 레이아웃
 _data/navigation.yml 상단 메뉴와 하위 메뉴, 푸터 바로가기(헤더와 푸터가 함께 쓴다)
 _layouts/            default(HTML 골격, MathJax 3) / page / tutorial(빵부스러기, PDF 저장 버튼, 이전·다음 이동)
-_includes/           header.html(메뉴 JS 포함) / footer.html
+_includes/           header.html(메뉴 JS 포함) / footer.html / breadcrumb.html / tex-logo.html / with-tex-logo.html
 _sass/               _variables(색, 글꼴, 간격, breakpoint) 외 base, layout, components, code, tutorials, faq
 assets/css/main.scss 위 SCSS를 모으는 진입점
 assets/documents/    배포용 PDF(번역 문서, 안내서)
@@ -47,6 +47,8 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - 02~04는 같은 장 구성을 따른다: 00-overview, 01-prep, 02-install, 03-texworks(macOS는 03-texshop), 04-first-doc, 05-fonts, 06-ktug-repo, 07-vscode, 08-lshort, 09-utils, 10-ktug-repo-adv
 - **세 튜토리얼 가운데 하나를 고치면 나머지 둘에도 같은 수정이 필요한지 반드시 확인한다.**
 - front matter에 `permalink`(예: `/getting-started/macos-mactex/install/`)와 `prev_tutorial`/`next_tutorial`을 명시한다. 장을 추가하거나 빼면 앞뒤 장의 링크와 00-overview의 목차, `_data/navigation.yml`을 함께 고친다.
+- 튜토리얼 레이아웃의 장 차례는 같은 폴더의 문서를 파일 이름 순서로 모아 자동으로 만든다. 첫 문서(00-overview)는 '개요'로 표시하고, 나머지는 각 문서의 `title`을 쓴다. 그래서 파일 이름의 번호 접두어가 곧 장 순서다.
+- 이전/다음 버튼에는 `prev_tutorial`/`next_tutorial`이 가리키는 문서의 제목이 표시된다.
 
 ## 작성 규칙
 
@@ -58,6 +60,7 @@ closet/              빌드와 git에서 제외되는 개인 보관 폴더. 수�
 - `/ktug-main-site/...`처럼 baseurl을 직접 쓰지 않는다. 마크다운 `[]()`로 내부 경로를 적지도 않는다.
 - 외부 링크는 마크다운 `[텍스트](https://...)`로 쓴다. 가능하면 https를 쓴다.
 - 이미지에는 반드시 `alt`를 넣는다.
+- 빵부스러기(`_includes/breadcrumb.html`)는 URL 단계를 따라 만든다. 단계 이름은 `_data/navigation.yml`의 메뉴 이름을 먼저 쓰고, 없으면 그 URL 문서의 `title`을 쓴다. 그래서 새 섹션을 만들면 URL 계층과 메뉴 이름을 맞춘다.
 
 ### 문체와 표기
 
