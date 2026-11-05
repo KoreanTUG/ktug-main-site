@@ -14,11 +14,11 @@
   submenu:
     - name: 시작하기 전에
       link: /getting-started/before-you-start/
-    - name: Windows에서 TeX 시작하기 (MiKTeX)
+    - name: Windows에서 MiKTeX 시작하기
       link: /getting-started/windows-miktex/
-    - name: Windows에서 TeX 시작하기 (TeX Live)
+    - name: Windows에서 TeX Live 시작하기
       link: /getting-started/windows-texlive/
-    - name: macOS에서 TeX 시작하기 (MacTeX)
+    - name: macOS에서 MacTeX 시작하기
       link: /getting-started/macos-mactex/
 - name: 읽을거리
   link: /readings/

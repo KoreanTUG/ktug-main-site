@@ -15,11 +15,11 @@ KTUG에서 제공하는 TeX 시작하기의 구성은 다음과 같습니다.
 ## 운영체제별 TeX 시작하기
 ### Windows
 
-- <a href="{{ '/getting-started/windows-miktex/' | relative_url }}">Windows에서 TeX 시작하기 (MiKTeX)</a>: Windows에서 MiKTeX을 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
-- <a href="{{ '/getting-started/windows-texlive/' | relative_url }}">Windows에서 TeX 시작하기 (TeX Live)</a>: Windows에서 TeX Live를 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
+- <a href="{{ '/getting-started/windows-miktex/' | relative_url }}">Windows에서 MiKTeX 시작하기</a>: Windows에서 MiKTeX을 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
+- <a href="{{ '/getting-started/windows-texlive/' | relative_url }}">Windows에서 TeX Live 시작하기</a>: Windows에서 TeX Live를 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
 
 ### macOS
 
-- <a href="{{ '/getting-started/macos-mactex/' | relative_url }}">macOS에서 TeX 시작하기 (MacTeX)</a>: macOS에서 MacTeX을 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
+- <a href="{{ '/getting-started/macos-mactex/' | relative_url }}">macOS에서 MacTeX 시작하기</a>: macOS에서 MacTeX을 중심으로 TeX을 시작하는 방법과 절차를 단계별로 안내합니다.
 
 

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Windows에서 TeX Live로 TeX 시작하기
+title: Windows에서 TeX Live 시작하기
 description: Windows에서 TeX Live로 TeX을 시작하는 방법을 안내합니다.
 permalink: /getting-started/windows-texlive/
 next_tutorial: /getting-started/windows-texlive/prep/

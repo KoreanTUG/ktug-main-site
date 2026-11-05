@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: macOS에서 MacTeX으로 TeX 시작하기
+title: macOS에서 MacTeX 시작하기
 description: macOS에서 MacTeX으로 TeX을 시작하는 방법을 안내합니다.
 permalink: /getting-started/macos-mactex/
 next_tutorial: /getting-started/macos-mactex/prep/
