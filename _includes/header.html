@@ -76,12 +76,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // 데스크톱 하위 메뉴가 창 오른쪽 밖으로 나가면 그만큼 왼쪽으로 당긴다
+    function fitSubmenu(li) {
+        const submenu = li.querySelector('.submenu');
+        if (!submenu) return;
+        submenu.style.left = '';
+        if (window.getComputedStyle(submenu).position !== 'absolute') return; // 모바일 메뉴
+
+        const hidden = window.getComputedStyle(submenu).display === 'none';
+        if (hidden) {
+            submenu.style.visibility = 'hidden';
+            submenu.style.display = 'block';
+        }
+        const margin = 8;
+        const rect = submenu.getBoundingClientRect();
+        const overflow = rect.right - (document.documentElement.clientWidth - margin);
+        if (hidden) {
+            submenu.style.display = '';
+            submenu.style.visibility = '';
+        }
+        if (overflow > 0) {
+            submenu.style.left = -Math.min(overflow, Math.max(rect.left - margin, 0)) + 'px';
+        }
+    }
+
+    document.querySelectorAll('.has-submenu').forEach(function(li) {
+        li.addEventListener('mouseenter', function() { fitSubmenu(li); });
+        li.addEventListener('focusin', function() { fitSubmenu(li); });
+    });
+
     // 하위 메뉴 토글 (데스크톱 및 모바일 모두)
     const submenuItems = document.querySelectorAll('.has-submenu > a');
     
     submenuItems.forEach(function(item) {
         item.addEventListener('click', function(e) {
             const parent = this.parentElement;
+            fitSubmenu(parent);
             const submenu = parent.querySelector('.submenu');
             const isMobile = window.innerWidth <= 768;
             const isSubmenuOpen = parent.classList.contains('submenu-open');
