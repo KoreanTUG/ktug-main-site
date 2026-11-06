@@ -6,16 +6,22 @@
 
 사용법: bundle exec jekyll build && python3 scripts/check-links.py
 문제가 있으면 목록을 출력하고 종료 코드 1을 돌려준다.
+
+baseurl이 비어 있으면(도메인 루트 배포) relative_url을 빠뜨린 링크를 찾을 수 없다. 그럴 때는 가짜 baseurl로
+따로 빌드해 검사한다:
+  bundle exec jekyll build --baseurl /_check -d <폴더>
+  CHECK_BASEURL=/_check python3 scripts/check-links.py <폴더>
 """
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = ROOT / "_site"
+SITE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / "_site"
 config = (ROOT / "_config.yml").read_text(encoding="utf-8")
 m = re.search(r'^baseurl:\s*"?([^"\s#]*)"?', config, re.M)
-BASEURL = m.group(1).rstrip("/") if m else ""
+BASEURL = os.environ.get("CHECK_BASEURL", m.group(1) if m else "").rstrip("/")
 
 # HTML 주석 안의 링크는 검사하지 않는다
 COMMENT = re.compile(r"<!--.*?-->", re.S)
