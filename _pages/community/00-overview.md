@@ -5,10 +5,6 @@ description: KTUG 커뮤니티를 안내합니다.
 permalink: /community/
 ---
 
-- [KTUG 마당](https://discourse.ktug.org/c/ktug/5): TeX과 KTUG 관련 소식과 정보를 나눕니다.
-
-- [Q&A 마당](https://discourse.ktug.org/c/qna/6): TeX을 사용하며 궁금한 점을 묻고 답합니다.
-
-- [FAQ 마당](https://discourse.ktug.org/c/faq/7): TeX 관련 자주 묻는 질문과 답변을 모읍니다.
+- [KTUG 마당](https://discourse.ktug.org): TeX과 KTUG 관련 소식과 정보를 나누고, 궁금한 점을 묻고 답합니다.
 
 - [GitHub Organization](https://github.com/KoreanTUG): KTUG/KTS에서 수행하는 TeX 관련 프로젝트를 나눕니다.

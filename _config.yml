@@ -74,17 +74,9 @@ defaults:
 # 게시판 id는 Discourse의 /c/<slug>/<id> 주소에서 확인한다.
 discourse:
   url: "https://discourse.ktug.org"
-  topics_per_category: 5
-  categories:
-    - name: KTUG 마당
-      slug: ktug
-      id: 5
-      icon: megaphone          # _includes/icons/<icon>.svg
-    - name: Q&A 마당
-      slug: qna
-      id: 6
-      icon: message-circle-question-mark
-    - name: FAQ 마당
-      slug: faq
-      id: 7
-      icon: list-checks
+  topics: 10                 # 메인 화면에 보여 줄 최근 글 수
+  category:                  # 공개 게시판은 하나다(2026-11-06 통합)
+    name: KTUG 마당
+    slug: ktug
+    id: 5
+    icon: megaphone          # _includes/icons/<icon>.svg

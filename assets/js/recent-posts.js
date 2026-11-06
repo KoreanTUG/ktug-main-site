@@ -1,5 +1,5 @@
 /*
- * 메인 화면 '최근 게시물': Discourse 게시판별 최근 글을 불러와 보여 준다.
+ * 메인 화면 '최근 게시물': Discourse 게시판(KTUG 마당)의 최근 글을 불러와 보여 준다.
  * 마크업은 index.html의 .recent-posts 영역. Discourse 주소와 게시판은 _config.yml의 discourse 항목.
  *
  * 사용하는 Discourse JSON
@@ -13,7 +13,7 @@
     if (!section || !window.fetch) return;
 
     var base = section.getAttribute('data-discourse-url');
-    var limit = parseInt(section.getAttribute('data-topics-per-category'), 10) || 5;
+    var limit = parseInt(section.getAttribute('data-topics'), 10) || 10;
     var dateFormat = new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
 
     function getJSON(path) {
@@ -71,20 +71,20 @@
         })
         .catch(function () { return []; });
 
-    section.querySelectorAll('.recent-posts-column').forEach(function (column) {
-        var list = column.querySelector('.recent-posts-list');
-        var slug = column.getAttribute('data-category-slug');
-        var id = column.getAttribute('data-category-id');
+    var board = section.querySelector('.recent-posts-board');
+    if (!board) return;
+    var list = board.querySelector('.recent-posts-list');
+    var slug = board.getAttribute('data-category-slug');
+    var id = board.getAttribute('data-category-id');
 
-        Promise.all([aboutTopicIds, getJSON('/c/' + slug + '/' + id + '/l/latest.json')])
-            .then(function (results) {
-                var skip = results[0];
-                var topics = (results[1].topic_list && results[1].topic_list.topics) || [];
-                topics = topics.filter(function (t) { return skip.indexOf(t.id) === -1; });
-                renderTopics(list, topics.slice(0, limit));
-            })
-            .catch(function () {
-                setStatus(list, '게시물을 불러오지 못했습니다.');
-            });
-    });
+    Promise.all([aboutTopicIds, getJSON('/c/' + slug + '/' + id + '/l/latest.json')])
+        .then(function (results) {
+            var skip = results[0];
+            var topics = (results[1].topic_list && results[1].topic_list.topics) || [];
+            topics = topics.filter(function (t) { return skip.indexOf(t.id) === -1; });
+            renderTopics(list, topics.slice(0, limit));
+        })
+        .catch(function () {
+            setStatus(list, '게시물을 불러오지 못했습니다.');
+        });
 })();

@@ -4,13 +4,7 @@
     padding: 0;
 }
 
-.recent-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.recent-posts-column {
+.recent-posts-board {
     @extend %card-surface; // 주요 서비스 카드와 같은 바탕(_components.scss)
     display: flex;
     flex-direction: column;
@@ -29,11 +23,18 @@
     }
 }
 
+// 넓은 화면에서는 두 줄로 나눠 보여 준다(왼쪽에서 오른쪽, 위에서 아래 순서로 최신 글부터)
 .recent-posts-list {
     flex: 1;
     list-style: none;
     margin: 0 0 1rem;
     padding: 0;
+    
+    @media (min-width: $breakpoint-md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5rem;
+    }
 }
 
 .recent-post {
@@ -42,10 +43,16 @@
     gap: 0.15rem;
     margin: 0;
     padding: 0.6rem 0;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
     
-    &:last-child {
-        border-bottom: none;
+    &:first-child {
+        border-top: none;
+    }
+    
+    @media (min-width: $breakpoint-md) {
+        &:nth-child(2) {
+            border-top: none;
+        }
     }
 }
 
@@ -65,6 +72,7 @@
 }
 
 .recent-posts-status {
+    grid-column: 1 / -1; // 두 줄 배치에서도 안내 문구는 한 줄 전체를 쓴다
     margin: 0;
     padding: 0.6rem 0;
     color: $text-light;
